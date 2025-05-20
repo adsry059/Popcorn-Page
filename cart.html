@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="addtocart.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 Your Cart</h1>
+    <a href="products.html" class="cart-link">← Continue Shopping</a>
+  </header>
+
+  <main>
+    <button id="clear-cart" class="clear-btn">Clear Cart</button>
+    <ul id="cart-list" class="cart-list"></ul>
+  </main>
+
+  <div id="cartItems"></div>
+
+<script src="addcart.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItems = document.getElementById('cartItems');
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <p>${item.name} — ${item.quantity} × ${item.price}</p>
+        `;
+        cartItems.appendChild(div);
+      });
+    }
+
+    updateCartCount();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+  <title>Asma' Convenience</title>
+  <link rel="stylesheet" href="asmaconvenience.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Asma Convenience Logo" class="logo-img" />
+    </div>    
+    <nav class="nav-links">
+      <a href="asmaconvenience.html">HOME</a>
+      <div class="dropdown">
+        <a href="#">CATEGORIES</a>
+        <div class="dropdown-content">
+          <a href="#">Dairy & Eggs</a>
+          <a href="#">Breads & Cakes</a>
+          <a href="#">Instant Noodles</a>
+          <a href="#">Ketchups & Sauces</a>
+          <a href="#">Beverages</a>
+          <a href="#">Snacks</a>
+          <a href="#">Household Essentials</a>
+          <a href="#">Toiletries</a>
+          <a href="#">Chocolates & Sweets</a>
+          <a href="#">Biscuits & Cookies</a>
+          <a href="#">3in1 coffee</a>
+          <a href="#">Stationaries</a>
+          <a href="#">Phone Accessories</a>
+          <a href="#">Ice Creams</a>
+          <a href="#">Cereals</a>
+          <a href="#">Health & Wellness</a>
+        </div>
+      </div>
+      <a href="products.html">PRODUCTS</a>
+      <a href="#">SERVICES</a>
+      <a href="payment.html">PAYMENT</a>
+      <a href="#">CONTACT US</a>
+    </nav>
+  </div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="asmaconvenience.png" class="banner-img" alt="Asma Convenience">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="banner1.jpg" class="banner-img" alt="Promo 1">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner2.jpg" class="banner-img" alt="Promo 2">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="banner3.jpg" class="banner-img" alt="Promo 3">
+    </div>
+  
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  
+  <!-- Dots -->
+  <div style="text-align:center; margin-top: 10px;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Dot controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    // Main function
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+    }
+    
+    // Optional: Auto-slide
+    setInterval(() => {
+      plusSlides(1);
+    }, 5000);
+    </script>
+    
+  
+</body>
+</html>

@@ -1,0 +1,103 @@
+[
+      {
+      "name": "USAMS EP-47 3.5mm In-Ear Earphone",
+      "price": 18.90,
+      "image": "usamsearphone.jpeg"
+    },
+    {
+      "name": "LDNIO Data Cable",
+      "price": 21.90,
+      "image": "ldnio.jpg"
+    },
+    {
+      "name": "USAMS Type-C to Type-C Data Cable",
+      "price": 18.90,
+      "image": "usamsdatacable.jpg"
+    },
+    {
+      "name": "WK Design WP-U57 QC3.0",
+      "price": 26.90,
+      "image": "qc30.jpg"
+    },
+    {
+      "name": "USAMS Fast Charger Kit",
+      "price": 39.90,
+      "image": "usamschargerkit.jpg"
+    },
+    {
+      "name": "Pop Up Window 14 Pro",
+      "price": 19.90,
+      "image": "popupwindow14.jpg"
+    },
+    {
+      "name": "Earpods Lightning Connector Bluetooth",
+      "price": 19.90,
+      "image": "earpodslc.jpg"
+    },
+    {
+      "name": "Earpods Lightning Connector",
+      "price": 29.90,
+      "image": "earpodslc.jpg"
+    },
+    {
+      "name": "REMAX Sports Bluetooth Earphone",
+      "price": 59.90,
+      "image": "remaxearphone.jpg"
+    },
+    {
+      "name": "WEKOME Data Cable",
+      "price": 12.00,
+      "image": "wekomedatacable.png"
+    },
+    {
+      "name": "REMAX Data Cable",
+      "price": 12.00,
+      "image": "remaxdatacable.jpg"
+    },
+    {
+      "name": "REIZ Swimming Goggles",
+      "price": 18.90,
+      "image": "reizgoggles.jpg"
+    },
+    {
+      "name": "Emergency Poncho",
+      "price": 3.90,
+      "image": "poncho.jpg"
+    },
+    {
+      "name": "Cord Organizer",
+      "price": 1.50,
+      "image": "cordorganizer.jpg"
+    },
+    {
+      "name": "REMAX Earphone Bluetooth",
+      "price": 69.90,
+      "image": "remaxearphone1.jpg"
+    },
+    {
+      "name": "REMAX Audio Jack Spliter",
+      "price": 46.50,
+      "image": "remaxjackspliter.jpg"
+    },
+    {
+      "name": "SAMSUNG Type-C To 3.5mm Adapter",
+      "price": 14.90,
+      "image": "samsungadapter.jpg"
+    },
+    {
+      "name": "SAMSUNG 25W PD Adapter",
+      "price": 35.90,
+      "image": "samsungpdadapter.jpg"
+    },
+    {
+      "name": "APPLE USB-C Power Adapter",
+      "price": 32.90,
+      "image": "appleusbcpoweradapter.jpg"
+    },
+    {
+      "name": "APPLE USB-C To Lightning Cable",
+      "price": 19.90,
+      "image": "appleusbclightning.jpg"
+    }
+  ]
+  

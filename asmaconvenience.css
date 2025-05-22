@@ -38,7 +38,7 @@
   }  
 
   .logo:hover {
-    background: linear-gradient(90deg, #ff6ec7, #63c5da);
+    background: linear-gradient;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -173,7 +173,7 @@
 .home-container {
   padding: 20px;
   max-width: 1200px;
-  margin: auto;
+  margin-left: 20px;
 }
 
 .section {
@@ -199,6 +199,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.15);
 }
 
 .card img {

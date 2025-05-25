@@ -149,5 +149,121 @@
       "price": 15.90,
       "image": "foamcarpet.png"
     }
+      {
+      "name": "Coconut Bun",
+      "price": 4.20,
+      "image": "coconutbut.jpg"
+    }
+       {
+      "name": "Cheese Bun",
+      "price": 2.20,
+      "image": "cheesebun.jpg"
+    }
+       {
+      "name": "Buttermilk Blueberry Bun",
+      "price": 1.80,
+      "image": "blueberrybun.jpg"
+    }
+       {
+      "name": "Banana Cake",
+      "price": 5.70,
+      "image": "bananacake.jpg"
+    }
+       {
+      "name": "Mighty white Cream Roll",
+      "price": 1.10,
+      "image": "mwbread.jpg"
+    }
+       {
+      "name": "Luva Lava Cake",
+      "price": 3.70,
+      "image": "luvacake.jpg"
+    }
+       {
+      "name": "Cadbury All Flavour",
+      "price": 3.90,
+      "image": "cadbury.jpg"
+    }
+       {
+      "name": "Cadbury Bar",
+      "price": 7.90,
+      "image": "cadburybig.jpg"
+    }
+       {
+      "name": "Cadbury Zip",
+      "price": 2.70,
+      "image": "cadburyzip.jpg"
+    }
+       {
+      "name": "Cadbury Bites",
+      "price": 5.90,
+      "image": "cdbites.jpg"
+    }
+      {
+      "name": "Choki Choki",
+      "price": 2.50,
+      "image": "choki.jpg"
+    }
+      {
+      "name": "Cloud 9",
+      "price": 0.60,
+      "image": "cloud9.jpg"
+    }
+      {
+      "name": "Coco Pie",
+      "price": 0.80,
+      "image": "cocopie.jpg"
+    }
+      {
+      "name": "Delfi Top",
+      "price": 2.00,
+      "image": "delfitop.jpg"
+    }
+      {
+      "name": "Kit Kat",
+      "price": 1.80,
+      "image": "kitkat.jpg"
+    }
+
+      {
+      "name": "Kit Kat 4 fingers",
+      "price": 3.70,
+      "image": "kitkat4f.jpg"
+    }
+      {
+      "name": "Kit Kat Bites",
+      "price": 4.30,
+      "image": "kitkatbites.jpg"
+    }
+      {
+      "name": "Kit Kat Chunky",
+      "price": 4.10,
+      "image": "kitkatchunky.jpg"
+    }
+      {
+      "name": "Lot 100 Gummy",
+      "price": 1.80,
+      "image": "lot100gummy.jpg"
+    }
+      {
+      "name": "Snickers",
+      "price": 4.90,
+      "image": "snickers.jpg"
+    }
+      {
+      "name": "Sour Ribbon",
+      "price": 1.60,
+      "image": "choki.jpg"
+    }
+      {
+      "name": "Toblerone",
+      "price": 6.90,
+      "image": "toblerone.jpg"
+    }
+      {
+      "name": "Tofiluk",
+      "price": 5.90,
+      "image": "tofiluk.jpg_480Wx480H"
+    }
   ]
   

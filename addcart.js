@@ -12,6 +12,11 @@ const clearCartBtn = document.getElementById("clear-cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+// Pagination-related
+let currentPage = 1;
+const productsPerPage = 25;
+let allProducts = []; // To store all loaded products
+
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -44,7 +49,11 @@ function renderProducts(products) {
 
   productList.innerHTML = ''; // Clear previous content
 
-  products.forEach(product => {
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const paginatedProducts = products.slice(startIndex, endIndex);
+
+  paginatedProducts.forEach(product => {
     const card = document.createElement("div");
     card.className = "product-card";
     card.innerHTML = `
@@ -61,6 +70,34 @@ function renderProducts(products) {
 
     productList.appendChild(card);
   });
+
+  renderPagination(products); // Add pagination buttons
+}
+
+function renderPagination(products) {
+  let pagination = document.getElementById("pagination");
+
+  // Create pagination container if it doesn't exist
+  if (!pagination) {
+    pagination = document.createElement("div");
+    pagination.id = "pagination";
+    pagination.className = "pagination";
+    productList.after(pagination);
+  }
+
+  pagination.innerHTML = "";
+
+  const totalPages = Math.ceil(products.length / productsPerPage);
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === currentPage) btn.classList.add("active");
+    btn.addEventListener("click", () => {
+      currentPage = i;
+      renderProducts(products);
+    });
+    pagination.appendChild(btn);
+  }
 }
 
 function renderCart() {
@@ -123,7 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (productList) {
     fetch("products.json")
       .then(res => res.json())
-      .then(data => renderProducts(data))
+      .then(data => {
+        allProducts = data;
+        renderProducts(allProducts);
+      })
       .catch(err => console.error("Failed to load products:", err));
   }
 

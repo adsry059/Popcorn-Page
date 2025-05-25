@@ -320,6 +320,29 @@
   transform: translateY(-2px);
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
  .title-payment {
   display: flex;
   justify-content: center;

@@ -98,6 +98,56 @@
       "name": "APPLE USB-C To Lightning Cable",
       "price": 19.90,
       "image": "appleusbclightning.jpg"
+    },
+    {
+      "name": "HIRO Cable Ties 2.5x150",
+      "price": 3.90,
+      "image": "hirocableties.jpg"
+    },
+    {
+      "name": "RCL Jump Rope",
+      "price": 7.90,
+      "image": "rcljumprope.jpg"
+    },
+    {
+      "name": "RCL Carrom Striker",
+      "price": 2.90,
+      "image": "carromsticker.jpeg"
+    },
+    {
+      "name": "MR DIY Party String Spray",
+      "price": 4.50,
+      "image": "partyspray.png"
+    },
+    {
+      "name": "Ping Pong Ball",
+      "price": 1.80,
+      "image": "pingpongball.jpg"
+    },
+    {
+      "name": "Shuttlecock",
+      "price": 3.90,
+      "image": "shuttlecock.jpg"
+    },
+    {
+      "name": "USB-C 60W Charge Cable",
+      "price": 24.90,
+      "image": "applrusbc.png"
+    },
+    {
+      "name": "RCL Table Tennis Racket",
+      "price": 14.90,
+      "image": "tabletennisracket.jpg"
+    },
+    {
+      "name": "NETTO Badminton Racket",
+      "price": 21.90,
+      "image": "nettoracket.png"
+    },
+    {
+      "name": "Foam Mat",
+      "price": 15.90,
+      "image": "foamcarpet.png"
     }
   ]
   

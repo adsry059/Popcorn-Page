@@ -291,9 +291,9 @@
     max-width: 180px;
     margin-top: 1rem;
     padding: 10px 14px;
-    background-color: #fed000;
-    color: #000;
-    border: none;
+    background-color: #000;
+    color: #fed000;
+    border: 2px solid #fed000;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
@@ -304,8 +304,8 @@
 
 .add-to-cart-btn span:last-child {
   font-size: 18px;
-  background-color: #fff;
-  color: #ffb703;
+  background-color: #fed000;
+  color: #000;
   border-radius: 50%;
   width: 24px;
   height: 24px;

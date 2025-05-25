@@ -109,7 +109,7 @@ function renderCart() {
   cart.forEach((item, index) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      ${item.name} x${item.quantity} – $${(item.price * item.quantity).toFixed(2)}
+      ${item.name} x${item.quantity} – RM${(item.price * item.quantity).toFixed(2)}
       <button class="qty-btn" data-index="${index}" data-delta="1">+</button>
       <button class="qty-btn" data-index="${index}" data-delta="-1">–</button>
       <button class="remove-btn" data-index="${index}">Remove</button>
@@ -119,7 +119,7 @@ function renderCart() {
   });
 
   const totalItem = document.createElement("li");
-  totalItem.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+  totalItem.innerHTML = `<strong>Total: RM${total.toFixed(2)}</strong>`;
   cartList.appendChild(totalItem);
 
   cartList.querySelectorAll(".qty-btn").forEach(btn => {

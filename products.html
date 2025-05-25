@@ -72,35 +72,6 @@
   <!-- This loads your functions first -->
 <script src="addcart.js"></script>
 
-<!-- This renders products & calls addToCart -->
-<script>
-  fetch('products.json')
-    .then(response => response.json())
-    .then(products => {
-      const productGrid = document.getElementById('product-list');
-      products.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>$${product.price.toFixed(2)}</p>
-          <button class="add-to-cart-btn">
-            <span>$${product.price.toFixed(2)}</span> <span>+</span>
-          </button>
-        `;
-
-        const addBtn = card.querySelector('.add-to-cart-btn');
-        addBtn.addEventListener('click', () => {
-          addToCart(product);
-        });
-
-        productGrid.appendChild(card);
-      });
-    })
-    .catch(error => console.error('Error loading products:', error));
-</script>
-
 
 </body>
 </html>

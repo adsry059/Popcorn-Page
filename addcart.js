@@ -50,9 +50,8 @@ function renderProducts(products) {
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p>$${product.price.toFixed(2)}</p>
       <button class="add-to-cart-btn">
-        <span>$${product.price.toFixed(2)}</span> <span>+</span>
+        <span>RM${product.price.toFixed(2)}</span> <span>+</span>
       </button>
     `;
 

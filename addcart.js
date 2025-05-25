@@ -51,7 +51,7 @@ function renderProducts(products) {
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <button class="add-to-cart-btn">
-        <span>RM${product.price.toFixed(2)}</span> <span>+</span>
+        <span>RM ${product.price.toFixed(2)}</span> <span>+</span>
       </button>
     `;
 

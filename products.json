@@ -9,223 +9,223 @@
       "name": "LDNIO Data Cable",
       "price": 21.90,
       "image": "ldnio.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "USAMS Type-C to Type-C Data Cable",
       "price": 18.90,
       "image": "usamsdatacable.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "WK Design WP-U57 QC3.0",
       "price": 26.90,
       "image": "qc30.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "USAMS Fast Charger Kit",
       "price": 39.90,
       "image": "usamschargerkit.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "Pop Up Window 14 Pro",
       "price": 19.90,
       "image": "popupwindow14.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "Earpods Lightning Connector Bluetooth",
       "price": 19.90,
       "image": "earpodslc.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "Earpods Lightning Connector",
       "price": 29.90,
       "image": "earpodslc.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "REMAX Sports Bluetooth Earphone",
       "price": 59.90,
       "image": "remaxearphone.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "WEKOME Data Cable",
       "price": 12.00,
       "image": "wekomedatacable.png",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "REMAX Data Cable",
       "price": 12.00,
       "image": "remaxdatacable.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "REIZ Swimming Goggles",
       "price": 18.90,
       "image": "reizgoggles.jpg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "Emergency Poncho",
       "price": 3.90,
       "image": "poncho.jpg",
-          "category": "Phone Accessories"
+      "category": "Household Essentials"
     },
     {
       "name": "Cord Organizer",
       "price": 1.50,
       "image": "cordorganizer.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "REMAX Earphone Bluetooth",
       "price": 69.90,
       "image": "remaxearphone1.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "REMAX Audio Jack Spliter",
       "price": 46.50,
       "image": "remaxjackspliter.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "SAMSUNG Type-C To 3.5mm Adapter",
       "price": 14.90,
       "image": "samsungadapter.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "SAMSUNG 25W PD Adapter",
       "price": 35.90,
       "image": "samsungpdadapter.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "APPLE USB-C Power Adapter",
       "price": 32.90,
       "image": "appleusbcpoweradapter.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "APPLE USB-C To Lightning Cable",
       "price": 19.90,
       "image": "appleusbclightning.jpg",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "HIRO Cable Ties 2.5x150",
       "price": 3.90,
       "image": "hirocableties.jpg",
-          "category": "Phone Accessories"
+      "category": "Household Essentials"
     },
     {
       "name": "RCL Jump Rope",
       "price": 7.90,
       "image": "rcljumprope.jpg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "RCL Carrom Striker",
       "price": 2.90,
       "image": "carromsticker.jpeg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "MR DIY Party String Spray",
       "price": 4.50,
       "image": "partyspray.png",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "Ping Pong Ball",
       "price": 1.80,
       "image": "pingpongball.jpg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "Shuttlecock",
       "price": 3.90,
       "image": "shuttlecock.jpg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "USB-C 60W Charge Cable",
       "price": 24.90,
       "image": "applrusbc.png",
-          "category": "Phone Accessories"
+      "category": "Phone Accessories"
     },
     {
       "name": "RCL Table Tennis Racket",
       "price": 14.90,
       "image": "tabletennisracket.jpg",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "NETTO Badminton Racket",
       "price": 21.90,
       "image": "nettoracket.png",
-          "category": "Phone Accessories"
+      "category": "Health & Wellness"
     },
     {
       "name": "Foam Mat",
       "price": 15.90,
       "image": "foamcarpet.png",
-          "category": "Phone Accessories"
+      "category": "Household Essentials"
     },
       {
       "name": "Coconut Bun",
       "price": 4.20,
       "image": "coconutbun.jpg",
-      "category": "Dairy & Eggs"     
+      "category": "Bread & Cakes"     
     },
        {
       "name": "Cheese Bun",
       "price": 2.20,
       "image": "cheesebun.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Buttermilk Blueberry Bun",
       "price": 1.80,
       "image": "blueberrybun.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Banana Cake",
       "price": 5.70,
       "image": "bananacake.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Mighty white Cream Roll",
       "price": 1.10,
       "image": "mwbread.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Luva Lava Cake",
       "price": 3.70,
       "image": "luvacake.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Steam Cake",
       "price": 3.70,
       "image": "cakesinar.png",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Peanut Butter & Chocolate Spread",
       "price": 3.70,
       "image": "mwchocojam.jpg",
-             "category": "Dairy & Eggs" 
+      "category": "Bread & Cakes" 
     },
        {
       "name": "Cadbury All Flavour",
@@ -237,98 +237,98 @@
       "name": "Cadbury Bar",
       "price": 7.90,
       "image": "cadburybig.jpg",
-             "category": "Snacks"
+      "category": "Snacks"
     },
        {
       "name": "Cadbury Zip",
       "price": 2.70,
       "image": "cadburyzip.jpg",
-             "category": "Snacks"
+      "category": "Snacks"
     },
        {
       "name": "Cadbury Bites",
       "price": 5.90,
       "image": "cdbites.jpg",
-             "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Choki Choki",
       "price": 2.50,
       "image": "choki.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Cloud 9",
       "price": 0.60,
       "image": "cloud9.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Coco Pie",
       "price": 0.80,
       "image": "cocopie.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Delfi Top",
       "price": 2.00,
       "image": "delfitop.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Kit Kat",
       "price": 1.80,
       "image": "kitkat.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
 
       {
       "name": "Kit Kat 4 fingers",
       "price": 3.70,
       "image": "kitkat4f.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Kit Kat Bites",
       "price": 4.30,
       "image": "kitkatbites.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Kit Kat Chunky",
       "price": 4.10,
       "image": "kitkatchunky.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Lot 100 Gummy",
       "price": 1.80,
       "image": "lot100gummy.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Snickers",
       "price": 4.90,
       "image": "snickers.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Sour Ribbon",
       "price": 1.60,
       "image": "sourribbon.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Toblerone",
       "price": 6.90,
       "image": "toblerone.jpg",
-            "category": "Snacks"
+      "category": "Snacks"
     },
       {
       "name": "Tofiluk",
       "price": 5.90,
       "image": "tofiluk.jpg_480Wx480H",
-            "category": "Snacks"
+      "category": "Snacks"
     }
   ]
   

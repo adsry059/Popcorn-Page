@@ -7,39 +7,82 @@
   <link rel="stylesheet" href="addtocart.css">
 </head>
 <body>
+
   <header>
     <h1>🛒 Your Cart</h1>
     <a href="products.html" class="cart-link">← Continue Shopping</a>
   </header>
 
   <main>
-    <button id="clear-cart" class="clear-btn">Clear Cart</button>
-    <ul id="cart-list" class="cart-list"></ul>
+    <div class="cart-container">
+      <button id="clear-cart" class="clear-btn">Clear Cart</button>
+
+      <div id="cartItems">
+        <!-- Cart items will be injected here -->
+      </div>
+
+      <!-- Subtotal Display -->
+      <div class="subtotal-section">
+        <p><strong>Item Subtotal:</strong> <span id="subtotal">RM 0.00</span></p>
+      </div>
+
+      <!-- Payment Section -->
+      <div class="payment-section">
+        <h2>Payment Method</h2>
+
+        <div class="payment-methods">
+          <button id="onlineBankingBtn" class="active">Online Banking</button>
+          <button id="creditDebitBtn">Credit / Debit</button>
+          <button id="cashBtn">Cash</button>
+        </div>
+
+        <div class="payment-options" id="bankOptions">
+          <label><input type="radio" name="bank" value="Maybank2u" checked> Maybank2u</label>
+          <label><input type="radio" name="bank" value="CIMB Clicks"> Cimb Clicks</label>
+          <label><input type="radio" name="bank" value="RHB Bank"> RHB Bank</label>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <div id="cartItems"></div>
+  <script src="addcart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItems = document.getElementById('cartItems');
+      const subtotalElement = document.getElementById('subtotal');
 
-<script src="addcart.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartItems = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Your cart is empty.</p>';
+        subtotalElement.textContent = 'RM 0.00';
+      } else {
+        let subtotal = 0;
+        cart.forEach(item => {
+          const div = document.createElement('div');
+          const total = item.quantity * item.price;
+          subtotal += total;
+          div.innerHTML = `
+            <p>
+              <span>${item.name}</span>
+              <span>RM ${item.price.toFixed(2)} × ${item.quantity}</span>
+            </p>
+          `;
+          cartItems.appendChild(div);
+        });
+        subtotalElement.textContent = `RM ${subtotal.toFixed(2)}`;
+      }
 
-    if (cart.length === 0) {
-      cartItems.innerHTML = '<p>Your cart is empty.</p>';
-    } else {
-      cart.forEach(item => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-          <p>${item.name} — ${item.quantity} × ${item.price}</p>
-        `;
-        cartItems.appendChild(div);
+      // Payment method button highlight
+      const paymentButtons = document.querySelectorAll('.payment-methods button');
+      paymentButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          paymentButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
       });
-    }
-
-    updateCartCount();
-  });
-</script>
+    });
+  </script>
 
 </body>
 </html>
+

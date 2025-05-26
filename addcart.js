@@ -12,6 +12,8 @@ const clearCartBtn = document.getElementById("clear-cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let selectedCategory = "All"; // default shows everything
+
 // Pagination-related
 let currentPage = 1;
 const productsPerPage = 25;
@@ -153,6 +155,17 @@ function clearCart() {
   renderCart();
 }
 
+function filterProductsByCategory(category) {
+  selectedCategory = category;
+
+  const filteredProducts = (category === "All")
+    ? allProducts
+    : allProducts.filter(p => p.category === category);
+
+  currentPage = 1; // reset to page 1 when category changes
+  renderProducts(filteredProducts);
+}
+
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
@@ -162,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(data => {
         allProducts = data;
-        renderProducts(allProducts);
+        filterProductsByCategory("All"); // this will trigger filtering + pagination
       })
       .catch(err => console.error("Failed to load products:", err));
   }

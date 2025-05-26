@@ -14,6 +14,11 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let selectedCategory = "All"; // default shows everything
 
+function getCategoryFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("category") || "All";
+}
+
 // Pagination-related
 let currentPage = 1;
 const productsPerPage = 25;
@@ -188,10 +193,5 @@ document.addEventListener("DOMContentLoaded", () => {
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", clearCart);
   }
-
-  function getCategoryFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("category") || "All";
-}
 
 });

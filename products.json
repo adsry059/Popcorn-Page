@@ -216,6 +216,18 @@
              "category": "Dairy & Eggs" 
     },
        {
+      "name": "Steam Cake",
+      "price": 3.70,
+      "image": "cakesinar.png",
+             "category": "Dairy & Eggs" 
+    },
+       {
+      "name": "Peanut Butter & Chocolate Spread",
+      "price": 3.70,
+      "image": "mwchocojam.jpg",
+             "category": "Dairy & Eggs" 
+    },
+       {
       "name": "Cadbury All Flavour",
       "price": 3.90,
       "image": "cadbury.jpg",

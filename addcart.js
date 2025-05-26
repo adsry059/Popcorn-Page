@@ -175,7 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(data => {
         allProducts = data;
-        filterProductsByCategory("All"); // this will trigger filtering + pagination
+        const categoryFromURL = getCategoryFromURL();
+        filterProductsByCategory(categoryFromURL);
       })
       .catch(err => console.error("Failed to load products:", err));
   }
@@ -187,4 +188,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", clearCart);
   }
+
+  function getCategoryFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("category") || "All";
+}
+
 });

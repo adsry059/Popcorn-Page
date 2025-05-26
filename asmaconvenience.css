@@ -250,7 +250,6 @@
   .products-section {
     flex: 1;
     padding: 60px 40px;
-    color: white;
   }
   
   .products-section h1 {
@@ -449,79 +448,4 @@
 .service-card p {
   font-size: 14px;
   line-height: 1.5;
-}
-
-.cart-container {
-  width: 600px;
-  margin: 40px auto;
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Table layout */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid #ccc;
-}
-
-th {
-  background-color: #f1f1f1;
-  font-weight: bold;
-}
-
-.product-img {
-  width: 50px;
-  height: auto;
-}
-
-/* Payment Method Section */
-.payment-methods {
-  margin-top: 20px;
-}
-
-.payment-methods h3 {
-  margin-bottom: 10px;
-}
-
-.payment-buttons {
-  margin: 15px 0;
-}
-
-.payment-buttons button {
-  padding: 8px 16px;
-  border: 1px solid #ccc;
-  background-color: #f4f4f4;
-  cursor: pointer;
-  margin-right: 10px;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-.payment-buttons button.active {
-  background-color: #cde3fd;
-  border-color: #87baff;
-}
-
-.payment-options {
-  margin-top: 10px;
-}
-
-.payment-options label {
-  display: inline-block;
-  margin-right: 20px;
-  vertical-align: middle;
-}
-
-.payment-options input[type="radio"] {
-  margin-right: 8px;
 }

@@ -17,76 +17,29 @@
     <ul id="cart-list" class="cart-list"></ul>
   </main>
 
-  <div class="cart-container">
-    <h2>Products Ordered</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Products Ordered</th>
-          <th>Unit Price</th>
-          <th>Amount</th>
-          <th>Item Subtotal</th>
-        </tr>
-      </thead>
-      <tbody id="cartItems">
-        <!-- JS will populate this -->
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="3" style="text-align: right; font-weight: bold;">Total:</td>
-          <td id="totalAmount">RM 0.00</td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <div class="payment-methods">
-      <h3>Payment Method</h3>
-      <div class="payment-buttons">
-        <button class="active">Online Banking</button>
-        <button>Credit / Debit</button>
-        <button>Cash</button>
-      </div>
-
-      <div class="payment-options">
-        <label><input type="radio" name="bank" checked> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Maybank_logo.svg/120px-Maybank_logo.svg.png" alt="Maybank2u" height="16"> Maybank2u</label>
-        <label><input type="radio" name="bank"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/CIMB_Group_logo.svg/120px-CIMB_Group_logo.svg.png" alt="Cimb Clicks" height="16"> Cimb Clicks</label>
-        <label><input type="radio" name="bank"> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/RHB_Bank_logo.svg/120px-RHB_Bank_logo.svg.png" alt="RHB Bank" height="16"> RHB Bank</label>
-      </div>
-    </div>
-  </div>
-
   <div id="cartItems"></div>
 
 <script src="addcart.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const cartItems = document.getElementById('cartItems');
-      const totalAmount = document.getElementById('totalAmount');
+  document.addEventListener('DOMContentLoaded', () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItems = document.getElementById('cartItems');
 
-      if (cart.length === 0) {
-        cartItems.innerHTML = `<tr><td colspan="4">Your cart is empty.</td></tr>`;
-        totalAmount.textContent = "RM 0.00";
-      } else {
-        let total = 0;
-        cart.forEach(item => {
-          const subtotal = item.price * item.quantity;
-          total += subtotal;
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <p>${item.name} — ${item.quantity} × ${item.price}</p>
+        `;
+        cartItems.appendChild(div);
+      });
+    }
 
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${item.name}</td>
-            <td>RM ${item.price.toFixed(2)}</td>
-            <td>${item.quantity}</td>
-            <td>RM ${subtotal.toFixed(2)}</td>
-          `;
-          cartItems.appendChild(row);
-        });
+    updateCartCount();
+  });
+</script>
 
-        totalAmount.textContent = `RM ${total.toFixed(2)}`;
-      }
-    });
-  </script>
 </body>
 </html>
-

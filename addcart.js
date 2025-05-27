@@ -148,11 +148,21 @@ function renderCart() {
   updateCartCount();
 }
 
-
 function clearCart() {
   cart = [];
   saveCart();
   renderCart();
+}
+
+function filterProductsByCategory(category) {
+  selectedCategory = category;
+
+  const filteredProducts = (category === "All")
+    ? allProducts
+    : allProducts.filter(p => p.category === category);
+
+  currentPage = 1; // reset to page 1 when category changes
+  renderProducts(filteredProducts);
 }
 
 // Initialization
@@ -164,7 +174,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(data => {
         allProducts = data;
-        renderProducts(allProducts);
+        const categoryFromURL = getCategoryFromURL();
+        filterProductsByCategory(categoryFromURL);
       })
       .catch(err => console.error("Failed to load products:", err));
   }

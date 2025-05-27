@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
   <title>Your Cart</title>
   <link rel="stylesheet" href="asmaconvenience.css">
 </head>
@@ -13,33 +14,37 @@
   </header>
 
   <main>
-    <button id="clear-cart" class="clear-btn">Clear Cart</button>
-    <ul id="cart-list" class="cart-list"></ul>
+    <div class="cart-wrapper">
+      <section class="cart-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Products Ordered</th>
+              <th>Unit Price</th>
+              <th>Amount</th>
+              <th>Item Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="cart-list">
+            <!-- Rows added via JS -->
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td colspan="3">Total</td>
+              <td id="cart-total">RM0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+  
+      <!-- Button placed AFTER the table -->
+      <div class="cart-footer">
+        <button id="clear-cart" class="clear-btn">Clear Cart</button>
+      </div>
+    </div>
   </main>
 
-  <div id="cartItems"></div>
-
 <script src="addcart.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartItems = document.getElementById('cartItems');
-
-    if (cart.length === 0) {
-      cartItems.innerHTML = '<p>Your cart is empty.</p>';
-    } else {
-      cart.forEach(item => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-          <p>${item.name} — ${item.quantity} × ${item.price}</p>
-        `;
-        cartItems.appendChild(div);
-      });
-    }
-
-    updateCartCount();
-  });
-</script>
 
 </body>
 </html>

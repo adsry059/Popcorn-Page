@@ -12,13 +12,6 @@ const clearCartBtn = document.getElementById("clear-cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let selectedCategory = "All"; // default shows everything
-
-function getCategoryFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("category") || "All";
-}
-
 // Pagination-related
 let currentPage = 1;
 const productsPerPage = 25;
@@ -114,25 +107,35 @@ function renderCart() {
   let total = 0;
 
   cart.forEach((item, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      ${item.name} x${item.quantity} – RM${(item.price * item.quantity).toFixed(2)}
-      <button class="qty-btn" data-index="${index}" data-delta="1">+</button>
-      <button class="qty-btn" data-index="${index}" data-delta="-1">–</button>
-      <button class="remove-btn" data-index="${index}">Remove</button>
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="cart-product">
+        <img src="${item.image}" alt="${item.name}">
+        <span>${item.name}</span>
+      </td>
+      <td>RM${item.price.toFixed(2)}</td>
+      <td>
+        <button class="qty-btn" data-index="${index}" data-delta="-1">−</button>
+        ${item.quantity}
+        <button class="qty-btn" data-index="${index}" data-delta="1">+</button>
+      </td>
+      <td>RM${subtotal.toFixed(2)}</td>
     `;
-    cartList.appendChild(li);
-    total += item.price * item.quantity;
+
+    cartList.appendChild(tr);
   });
 
-  const totalItem = document.createElement("li");
-  totalItem.innerHTML = `<strong>Total: RM${total.toFixed(2)}</strong>`;
-  cartList.appendChild(totalItem);
+  const totalCell = document.getElementById("cart-total");
+  totalCell.textContent = `RM${total.toFixed(2)}`;
 
-  cartList.querySelectorAll(".qty-btn").forEach(btn => {
+  // Add event listeners
+  document.querySelectorAll(".qty-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const index = parseInt(btn.getAttribute("data-index"));
-      const delta = parseInt(btn.getAttribute("data-delta"));
+      const index = parseInt(btn.dataset.index);
+      const delta = parseInt(btn.dataset.delta);
       cart[index].quantity += delta;
       if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
@@ -142,33 +145,14 @@ function renderCart() {
     });
   });
 
-  cartList.querySelectorAll(".remove-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const index = parseInt(btn.getAttribute("data-index"));
-      cart.splice(index, 1);
-      saveCart();
-      renderCart();
-    });
-  });
-
   updateCartCount();
 }
+
 
 function clearCart() {
   cart = [];
   saveCart();
   renderCart();
-}
-
-function filterProductsByCategory(category) {
-  selectedCategory = category;
-
-  const filteredProducts = (category === "All")
-    ? allProducts
-    : allProducts.filter(p => p.category === category);
-
-  currentPage = 1; // reset to page 1 when category changes
-  renderProducts(filteredProducts);
 }
 
 // Initialization
@@ -180,8 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(data => {
         allProducts = data;
-        const categoryFromURL = getCategoryFromURL();
-        filterProductsByCategory(categoryFromURL);
+        renderProducts(allProducts);
       })
       .catch(err => console.error("Failed to load products:", err));
   }
@@ -193,5 +176,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (clearCartBtn) {
     clearCartBtn.addEventListener("click", clearCart);
   }
-
 });

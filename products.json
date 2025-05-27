@@ -177,49 +177,49 @@
       "name": "Coconut Bun",
       "price": 4.20,
       "image": "coconutbun.jpg",
-      "category": "Bread & Cakes"     
+      "category": "Dairy & Eggs"     
     },
        {
       "name": "Cheese Bun",
       "price": 2.20,
       "image": "cheesebun.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Buttermilk Blueberry Bun",
       "price": 1.80,
       "image": "blueberrybun.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Banana Cake",
       "price": 5.70,
       "image": "bananacake.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Mighty white Cream Roll",
       "price": 1.10,
       "image": "mwbread.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Luva Lava Cake",
       "price": 3.70,
       "image": "luvacake.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Steam Cake",
       "price": 3.70,
       "image": "cakesinar.png",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Peanut Butter & Chocolate Spread",
       "price": 3.70,
       "image": "mwchocojam.jpg",
-      "category": "Bread & Cakes" 
+      "category": "Dairy & Eggs" 
     },
        {
       "name": "Cadbury All Flavour",

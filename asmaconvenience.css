@@ -466,6 +466,7 @@ header h1 {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 14px;
+  text-align: right;
 }
 
 .cart-link:hover {

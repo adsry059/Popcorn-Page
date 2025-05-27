@@ -252,6 +252,13 @@
     padding: 60px 40px;
   }
   
+  .products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  }
+
   .products-section h1 {
     font-size: 36px;
     margin-bottom: 30px;
@@ -467,6 +474,10 @@ header h1 {
   text-decoration: none;
   font-size: 14px;
   text-align: right;
+  background-color: #fff;
+  padding: 8px 14px;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;;
 }
 
 .cart-link:hover {

@@ -165,6 +165,11 @@ function filterProductsByCategory(category) {
   renderProducts(filteredProducts);
 }
 
+function getCategoryFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("category") || "All";
+}
+
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();

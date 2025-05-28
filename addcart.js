@@ -71,26 +71,34 @@ function renderProducts(products) {
     productList.appendChild(card);
   });
 
+  function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
 const searchInput = document.getElementById("searchInput");
 
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.trim().toLowerCase();
-      let filtered = allProducts;
+searchInput.addEventListener("input", debounce(() => {
+  const query = searchInput.value.trim().toLowerCase();
+  let filtered = allProducts;
 
-      if (query !== "") {
-        filtered = allProducts.filter(product =>
-          product.name.toLowerCase().includes(query) ||
-          (product.category && product.category.toLowerCase().includes(query))
-        );
-      } else if (selectedCategory && selectedCategory !== "All") {
-        filtered = allProducts.filter(p => p.category === selectedCategory);
-      }
-
-      currentPage = 1;
-      renderProducts(filtered);
-    });
+  if (query !== "") {
+    filtered = allProducts.filter(product =>
+      product.name.toLowerCase().includes(query) ||
+      (product.category && product.category.toLowerCase().includes(query))
+    );
+  } else if (selectedCategory && selectedCategory !== "All") {
+    filtered = allProducts.filter(p => p.category === selectedCategory);
   }
+
+  currentPage = 1;
+  renderProducts(filtered);
+}, 300)); // 300ms delay
 
   renderPagination(products); // Add pagination buttons
 }

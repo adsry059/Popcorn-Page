@@ -481,6 +481,19 @@ header h1 {
   color: #fed000;
 }
 
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #searchInput {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
 /* Main Cart Section */
 main {
   padding: 40px 20px;

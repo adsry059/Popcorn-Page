@@ -71,6 +71,27 @@ function renderProducts(products) {
     productList.appendChild(card);
   });
 
+const searchInput = document.getElementById("searchInput");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let filtered = allProducts;
+
+      if (query !== "") {
+        filtered = allProducts.filter(product =>
+          product.name.toLowerCase().includes(query) ||
+          (product.category && product.category.toLowerCase().includes(query))
+        );
+      } else if (selectedCategory && selectedCategory !== "All") {
+        filtered = allProducts.filter(p => p.category === selectedCategory);
+      }
+
+      currentPage = 1;
+      renderProducts(filtered);
+    });
+  }
+
   renderPagination(products); // Add pagination buttons
 }
 

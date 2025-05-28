@@ -80,25 +80,6 @@ function renderProducts(products) {
     productList.appendChild(card);
   });
 
-  const searchInput = document.getElementById("searchInput");
-
-searchInput.addEventListener("input", debounce(() => {
-  const query = searchInput.value.trim().toLowerCase();
-  let filtered = allProducts;
-
-  if (query !== "") {
-    filtered = allProducts.filter(product =>
-      product.name.toLowerCase().includes(query) ||
-      (product.category && product.category.toLowerCase().includes(query))
-    );
-  } else if (selectedCategory && selectedCategory !== "All") {
-    filtered = allProducts.filter(p => p.category === selectedCategory);
-  }
-
-  currentPage = 1;
-  renderProducts(filtered);
-}, 300)); // 300ms delay
-
   renderPagination(products); // Add pagination buttons
 }
 
@@ -201,6 +182,25 @@ function getCategoryFromURL() {
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
+
+  const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", debounce(() => {
+  const query = searchInput.value.trim().toLowerCase();
+  let filtered = allProducts;
+
+  if (query !== "") {
+    filtered = allProducts.filter(product =>
+      product.name.toLowerCase().includes(query) ||
+      (product.category && product.category.toLowerCase().includes(query))
+    );
+  } else if (selectedCategory && selectedCategory !== "All") {
+    filtered = allProducts.filter(p => p.category === selectedCategory);
+  }
+
+  currentPage = 1;
+  renderProducts(filtered);
+}, 300)); // 300ms delay
 
   if (productList) {
     fetch("products.json")

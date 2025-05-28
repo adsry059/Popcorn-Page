@@ -12,6 +12,8 @@ const clearCartBtn = document.getElementById("clear-cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let selectedCategory = "All";
+
 // Pagination-related
 let currentPage = 1;
 const productsPerPage = 25;
@@ -99,6 +101,56 @@ searchInput.addEventListener("input", debounce(() => {
   currentPage = 1;
   renderProducts(filtered);
 }, 300)); // 300ms delay
+
+const searchInput = document.getElementById("searchInput");
+const minPriceInput = document.getElementById("minPrice");
+const maxPriceInput = document.getElementById("maxPrice");
+
+function debounce(func, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
+function applyFilters() {
+  const query = searchInput?.value.trim().toLowerCase() || "";
+  const minPrice = parseFloat(minPriceInput?.value) || 0;
+  const maxPrice = parseFloat(maxPriceInput?.value) || Infinity;
+
+  let filtered = allProducts;
+
+  // Apply search filter
+  if (query !== "") {
+    filtered = filtered.filter(product =>
+      product.name.toLowerCase().includes(query) ||
+      (product.category && product.category.toLowerCase().includes(query))
+    );
+  }
+
+  // Apply price filter
+  filtered = filtered.filter(product =>
+    product.price >= minPrice && product.price <= maxPrice
+  );
+
+  // Apply category filter if any
+  if (selectedCategory && selectedCategory !== "All") {
+    filtered = filtered.filter(product => product.category === selectedCategory);
+  }
+
+  currentPage = 1;
+  renderProducts(filtered);
+}
+
+const debouncedFilter = debounce(applyFilters, 300);
+
+searchInput?.addEventListener("input", debouncedFilter);
+minPriceInput?.addEventListener("input", debouncedFilter);
+maxPriceInput?.addEventListener("input", debouncedFilter);
+
 
   renderPagination(products); // Add pagination buttons
 }

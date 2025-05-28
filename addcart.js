@@ -112,6 +112,8 @@ function renderPagination(products) {
 function renderCart() {
   if (!cartList) return;
 
+  console.log("Cart contents:", cart);
+
   cartList.innerHTML = "";
   let total = 0;
 

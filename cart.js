@@ -1,13 +1,28 @@
+// cart.js
+
+const cartList = document.getElementById("cart-list");
+const cartCount = document.getElementById("cartCount");
+const clearCartBtn = document.getElementById("clear-cart");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+function getTotalItems() {
+  if (!Array.isArray(cart)) return 0;
+  return cart.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+function updateCartCount() {
+  if (cartCount) {
+    cartCount.textContent = getTotalItems();
+  }
+}
+
 function renderCart() {
-  const cartList = document.getElementById("cart-list");
-  const cartTotal = document.getElementById("cart-total");
-  if (!cartList || !cartTotal) return;
+  if (!cartList) return;
 
   cartList.innerHTML = "";
   let total = 0;
@@ -16,24 +31,28 @@ function renderCart() {
     const subtotal = item.price * item.quantity;
     total += subtotal;
 
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${item.name}</td>
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="cart-product">
+        <img src="${item.image}" alt="${item.name}">
+        <span>${item.name}</span>
+      </td>
       <td>RM${item.price.toFixed(2)}</td>
       <td>
-        <button data-index="${index}" data-delta="-1">-</button>
+        <button class="qty-btn" data-index="${index}" data-delta="-1">−</button>
         ${item.quantity}
-        <button data-index="${index}" data-delta="1">+</button>
+        <button class="qty-btn" data-index="${index}" data-delta="1">+</button>
       </td>
       <td>RM${subtotal.toFixed(2)}</td>
     `;
-    cartList.appendChild(row);
+
+    cartList.appendChild(tr);
   });
 
-  cartTotal.textContent = `RM${total.toFixed(2)}`;
+  const totalCell = document.getElementById("cart-total");
+  totalCell.textContent = `RM${total.toFixed(2)}`;
 
-  // Reattach event listeners to buttons
-  document.querySelectorAll("button[data-index]").forEach(btn => {
+  document.querySelectorAll(".qty-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const index = parseInt(btn.dataset.index);
       const delta = parseInt(btn.dataset.delta);
@@ -45,14 +64,21 @@ function renderCart() {
       renderCart();
     });
   });
+
+  updateCartCount();
 }
 
-// Clear cart
-document.getElementById("clear-cart").addEventListener("click", () => {
+function clearCart() {
   cart = [];
   saveCart();
   renderCart();
-});
+}
 
-// On load
-document.addEventListener("DOMContentLoaded", renderCart);
+document.addEventListener("DOMContentLoaded", () => {
+  renderCart();
+  updateCartCount();
+
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener("click", clearCart);
+  }
+});

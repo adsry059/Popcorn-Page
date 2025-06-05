@@ -339,7 +339,7 @@
     {
       "name": "Lactel Bliss 700g",
       "price": 7.50,
-      "image": "bliss2.jpg",
+      "image": ["bliss101.png", "bliss102.png", "bliss103.png"],
       "category": "Dairy & Eggs"
     },
     {
@@ -381,7 +381,7 @@
     {
       "name": "Dutch Lady Milk 200ml",
       "price": 2.20,
-      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png", "dl206.png"],
+      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png"],
       "category": "Dairy & Eggs"
     },
     {

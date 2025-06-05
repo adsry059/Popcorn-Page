@@ -375,7 +375,7 @@
     {
       "name": "Dutch Lady Milk 1L",
       "price": 7.90,
-      "image": ["ducthlady2.jpg", "dutchlady3.jpg"],
+      "image": ["dl101.png", "dl102.png"],
       "category": "Dairy & Eggs"
     },
     {
@@ -387,7 +387,7 @@
     {
       "name": "Bright Cow FGV Milk 200ml",
       "price": 2.00,
-      "image": "fgv1.png",
+      "image": ["fgv1.png", "fgv2.png"],
       "category": "Dairy & Eggs"
     },
     {

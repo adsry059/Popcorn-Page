@@ -1,4 +1,28 @@
 [
+  {
+      "name": "Dutch Lady Milk 1L",
+      "price": 7.90,
+      "image": ["dl101.png", "dl102.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Dutch Lady Milk 200ml",
+      "price": 2.20,
+      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Bright Cow FGV Milk 200ml",
+      "price": 2.00,
+      "image": ["fgv1.png", "fgv2.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Goodday Milk 200ml",
+      "price": 2.20,
+      "image": ["gd1.png", "gd2.png", "gd3.png", "gd4.png"],
+      "category": "Dairy & Eggs"
+    },
       {
       "name": "USAMS EP-47 3.5mm In-Ear Earphone",
       "price": 18.90,
@@ -370,30 +394,6 @@
       "name": "Grade A Egg",
       "price": 0.60,
       "image": "eggs.jpg",
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Dutch Lady Milk 1L",
-      "price": 7.90,
-      "image": ["dl101.png", "dl102.png"],
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Dutch Lady Milk 200ml",
-      "price": 2.20,
-      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png"],
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Bright Cow FGV Milk 200ml",
-      "price": 2.00,
-      "image": ["fgv1.png", "fgv2.png"],
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Goodday Milk 200ml",
-      "price": 2.20,
-      "image": "goodday.png",
       "category": "Dairy & Eggs"
     }
   ]

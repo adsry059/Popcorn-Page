@@ -287,6 +287,44 @@
     margin-bottom: 10px;
   }
 
+  .products-slideshow {
+  position: relative;
+  width: 100%;
+}
+
+.products-slideshow .slide {
+  display: none;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.products-slideshow .slide.active {
+  display: block;
+}
+
+.products-slideshow .dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.products-slideshow .dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fed000;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.products-slideshow .dot:hover,
+.products-slideshow .dot.active {
+  background-color: #fed000;
+}
+
   .add-to-cart-btn {
     display: flex;
     justify-content: space-between;

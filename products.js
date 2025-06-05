@@ -1,4 +1,4 @@
-// products.js
+// UPDATED products.js with image slideshow support
 
 const productList = document.getElementById("product-list");
 const cartCount = document.getElementById("cartCount");
@@ -52,11 +52,33 @@ function renderProducts(products) {
   const startIndex = (currentPage - 1) * productsPerPage;
   const paginated = products.slice(startIndex, startIndex + productsPerPage);
 
-  paginated.forEach(product => {
+  paginated.forEach((product, index) => {
     const card = document.createElement("div");
     card.className = "product-card";
+
+    let imageContent = '';
+
+    if (Array.isArray(product.image)) {
+      const images = product.image.map((img, i) => `
+        <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" alt="${product.name}">
+      `).join('');
+
+      const dots = product.image.map((_, i) => `
+        <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" data-product="${index}"></span>
+      `).join('');
+
+      imageContent = `
+        <div class="products-slideshow" data-product="${index}">
+          ${images}
+          <div class="dots">${dots}</div>
+        </div>
+      `;
+    } else {
+      imageContent = `<img src="${product.image}" alt="${product.name}">`;
+    }
+
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      ${imageContent}
       <h3>${product.name}</h3>
       <button class="add-to-cart-btn">
         <span>RM ${product.price.toFixed(2)}</span> <span>+</span>
@@ -71,6 +93,7 @@ function renderProducts(products) {
   });
 
   renderPagination(products);
+  initSlideshows();
 }
 
 function renderPagination(products) {
@@ -96,6 +119,22 @@ function renderPagination(products) {
     });
     pagination.appendChild(btn);
   }
+}
+
+function initSlideshows() {
+  const slideshows = document.querySelectorAll(".slideshow");
+  slideshows.forEach(slideshow => {
+    const dots = slideshow.querySelectorAll(".dot");
+    const slides = slideshow.querySelectorAll(".slide");
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const index = +dot.dataset.index;
+        slides.forEach((s, i) => s.classList.toggle("active", i === index));
+        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      });
+    });
+  });
 }
 
 function filterProductsByCategory(category) {

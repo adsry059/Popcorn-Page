@@ -323,6 +323,78 @@
       "price": 5.90,
       "image": "tofiluk.jpg_480Wx480H",
       "category": "Snacks"
+    },
+    {
+      "name": "Ballantyne Butter",
+      "price": 1.40,
+      "image": "ballantyne.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Lactel Bliss 200g",
+      "price": 3.30,
+      "image": "bliss1.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Lactel Bliss 700g",
+      "price": 7.50,
+      "image": "bliss2.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Beqa Cream Cheese 250g",
+      "price": 3.90,
+      "image": "beqa.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Oki Gold Cream Cheese 250g",
+      "price": 3.90,
+      "image": "beqa2.jpeg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Farm Fresh Milk 200ml",
+      "price": 3.30,
+      "image": "farmfresh1.png",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Beqa Slice Cheese",
+      "price": 14.50,
+      "image": "beqa3.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Grade A Egg",
+      "price": 0.60,
+      "image": "eggs.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Dutch Lady Milk 1L",
+      "price": 7.90,
+      "image": "ducthlady2.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Dutch Lady Milk 200ml",
+      "price": 2.20,
+      "image": "ducthlady1.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Bright Cow FGV Milk 200ml",
+      "price": 2.00,
+      "image": "fgv1.png",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Goodday Milk 200ml",
+      "price": 2.20,
+      "image": "goodday.png",
+      "category": "Dairy & Eggs"
     }
   ]
   

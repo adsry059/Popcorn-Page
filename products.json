@@ -357,7 +357,7 @@
     {
       "name": "Farm Fresh Milk 200ml",
       "price": 3.30,
-      "image": "farmfresh1.png",
+      "image": ["farmfresh1.png", "farmfresh2.png"],
       "category": "Dairy & Eggs"
     },
     {
@@ -375,7 +375,7 @@
     {
       "name": "Dutch Lady Milk 1L",
       "price": 7.90,
-      "image": "ducthlady2.jpg",
+      "image": ["ducthlady2.jpg", "dutchlady3.jpg"],
       "category": "Dairy & Eggs"
     },
     {

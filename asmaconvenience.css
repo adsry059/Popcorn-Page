@@ -301,6 +301,7 @@
 
 .products-slideshow .slide.active {
   display: block;
+  background-color: transparent;
 }
 
 .products-slideshow .dots {

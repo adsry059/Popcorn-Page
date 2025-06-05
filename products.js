@@ -122,7 +122,7 @@ function renderPagination(products) {
 }
 
 function initSlideshows() {
-  const slideshows = document.querySelectorAll(".slideshow");
+  const slideshows = document.querySelectorAll(".products-slideshow");
   slideshows.forEach(slideshow => {
     const dots = slideshow.querySelectorAll(".dot");
     const slides = slideshow.querySelectorAll(".slide");

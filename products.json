@@ -381,7 +381,7 @@
     {
       "name": "Dutch Lady Milk 200ml",
       "price": 2.20,
-      "image": "ducthlady1.jpg",
+      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png", "dl206.png"],
       "category": "Dairy & Eggs"
     },
     {

@@ -198,9 +198,9 @@
       "category": "Dairy & Eggs" 
     },
        {
-      "name": "Mighty white Cream Roll",
+      "name": "Mighty White Cream Roll",
       "price": 1.10,
-      "image": "mwbread.jpg",
+      "image": ["mwbuttersugar.jpg", "mwchocolate.jpg", "mwstrawberrylychee.jpeg", "mwsweetcorn.jpg", "mwcookiescream.jpg", "mwbutterscotchvanilla.jpg"],
       "category": "Dairy & Eggs" 
     },
        {

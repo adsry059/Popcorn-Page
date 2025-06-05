@@ -333,7 +333,7 @@
     {
       "name": "Lactel Bliss 200g",
       "price": 3.30,
-      "image": "bliss1.jpg",
+      "image": ["bliss201.png", "bliss202.png", "bliss203.png"],
       "category": "Dairy & Eggs"
     },
     {

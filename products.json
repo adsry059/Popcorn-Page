@@ -1,29 +1,5 @@
 [
-  {
-      "name": "Dutch Lady Milk 1L",
-      "price": 7.90,
-      "image": ["dl101.png", "dl102.png"],
-      "category": "Dairy & Eggs"
-    },
     {
-      "name": "Dutch Lady Milk 200ml",
-      "price": 2.20,
-      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png"],
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Bright Cow FGV Milk 200ml",
-      "price": 2.00,
-      "image": ["fgv1.png", "fgv2.png"],
-      "category": "Dairy & Eggs"
-    },
-    {
-      "name": "Goodday Milk 200ml",
-      "price": 2.20,
-      "image": ["gd1.png", "gd2.png", "gd3.png", "gd4.png"],
-      "category": "Dairy & Eggs"
-    },
-      {
       "name": "USAMS EP-47 3.5mm In-Ear Earphone",
       "price": 18.90,
       "image": "usamsearphone.jpeg",
@@ -395,6 +371,42 @@
       "price": 0.60,
       "image": "eggs.jpg",
       "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Dutch Lady Milk 1L",
+      "price": 7.90,
+      "image": ["dl101.png", "dl102.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Dutch Lady Milk 200ml",
+      "price": 2.20,
+      "image": ["dl201.png", "dl202.png", "dl203.png", "dl204.png", "dl205.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Bright Cow FGV Milk 200ml",
+      "price": 2.00,
+      "image": ["fgv1.png", "fgv2.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Goodday Milk 200ml",
+      "price": 2.20,
+      "image": ["gd1.png", "gd2.png", "gd3.png", "gd4.png"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Maggi Bowl Hot Mealz",
+      "price": 5.60,
+      "image": ["maggihm1.png", "maggihm2.png", "maggihm3.png"],
+      "category": "Instant Noodles"
+    },
+    {
+      "name": "Maggi Pedas Giler Bowl",
+      "price": 5.20,
+      "image": ["maggipg1.png", "maggipg2.png"],
+      "category": "Instant Noodles"
     }
   ]
   

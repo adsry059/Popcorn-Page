@@ -625,6 +625,43 @@
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 20px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services-left h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .services-right {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .service-icon,
+  .service-card i {
+    display: block;
+    margin: 0 auto 12px;
+  }
+}
+
 /* Header */
 header {
   padding: 20px;

@@ -412,37 +412,37 @@
       "name": "Maggi Pedas Giler Cheezy Berapi",
       "price": 6.10,
       "image": "maggipgc.png",
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     },
     {
       "name": "Mamee Express Cup",
       "price": 2.50,
       "image": ["mce1.png", "mce2.png", "mce3.png", "mce4.png"],
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     },
     {
       "name": "Knorr Porridge Cup",
       "price": 3.50,
       "image": ["knorrp1.png", "knorrp2.png"],
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     },
     {
       "name": "Knorr Mashed Potato Cup",
       "price": 5.10,
       "image": ["knorrmp1.png", "knorrmp2.png", "knorrmp3.png"],
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     },
     {
       "name": "Mamee Chef Cup",
       "price": 3.70,
       "image": ["mcc1.png", "mcc2.png"],
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     },
     {
       "name": "Samyang Rose, Habanero Lime, Carbonara, Jjajang",
       "price": 6.50,
       "image": ["r6501.png", "r6504.png", "r6503.png", "r6504.png"],
-      "category":"Instant Noodles"
+      "category": "Instant Noodles"
     }
   ]
   

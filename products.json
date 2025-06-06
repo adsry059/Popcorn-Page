@@ -803,6 +803,30 @@
       "price": 3.200,
       "image": ["oatsideori.png", "oatsidechoco.png"],
       "category": "Beverages"
+    },
+    {
+      "name": "Calpis Soda 320ml",
+      "price": 3.20,
+      "image": ["calpissoda1.png", "calpissoda2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Milo Can",
+      "price": 3.30,
+      "image": "milocan.jpg",
+      "category": "Beverages"
+    },
+    {
+      "name": "Clever Mama Egg Pudding",
+      "price": 4.00,
+      "image": ["cm2.jpg", "cm1.jpg"],
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Milo Packet Drink 200ml",
+      "price": 2.20,
+      "image": "milopacket.jpg",
+      "category": "Beverages"
     }
   ]
   

@@ -713,6 +713,18 @@
       "price": 4.00,
       "image": "ribenamobile.png",
       "category": "Beverages"
+    },
+    {
+      "name": "Yeo's Yeogurt",
+      "price": 2.20,
+      "image": ["yeogurt-original.jpg", "yeogurt-grape.jpg", "yeogurt-apple.jpg", "yeogurt-mango.jpg"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Yeo's Packet Drinks",
+      "price": 1.30,
+      "image": ["yeos101.png", "yeos102.png", "yeos103.png", "yeos104.png", "yeos105.png"],
+      "category": "Beverages"
     }
   ]
   

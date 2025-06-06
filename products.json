@@ -775,9 +775,33 @@
       "category": "Beverages"
     },
     {
+      "name": "Spritzer Mineral Water 1250ml",
+      "price": 3.20,
+      "image": "s1000ml.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Spritzer Mineral Water 550ml",
+      "price": 1.89,
+      "image": "s550ml.png",
+      "category": "Beverages"
+    },
+    {
       "name": "Tinge by Spritzer 450ml",
       "price": 1.90,
       "image": ["tinge01.png", "tinge02.png", "tinge03.png", "tinge04.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Oatside Oat Milk Coffee",
+      "price": 3.90,
+      "image": ["oatsidecoffee.png", "oatsidecaramel.png", "oatsidemocha.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Oatside Oatmilk Original & Chocolate",
+      "price": 3.200,
+      "image": ["oatsideori.png", "oatsidechoco.png"],
       "category": "Beverages"
     }
   ]

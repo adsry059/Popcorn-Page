@@ -635,6 +635,30 @@
       "price": 6.90,
       "image": "wrigleys.jpg",
       "category": "Snacks"
+    },
+    {
+      "name": "Himalaya Candy",
+      "price": 2.20,
+      "image": ["hima1.png", "hima2.png", "hima3.png"],
+      "category": "Snacks"
+    },
+    {
+      "name": "Skittles 40g",
+      "price": 3.00,
+      "image": ["skittles1.png", "skittles2.png", "skittles3.png"],
+      "category": "Snacks"
+    },
+    {
+      "name": "Halls Candy",
+      "price": 1.60,
+      "image": ["halls1.png", "halls2.png", "halls3.png", "halls4.png", "halls5.png"],
+      "category": "Snacks"
+    },
+    {
+      "name": "Mentos Pure Fresh Chewing Gum",
+      "price": 4.30,
+      "image": ["mentos1.png", "mentos2.png", "mentos3.png"],
+      "category": "Snacks"
     }
   ]
   

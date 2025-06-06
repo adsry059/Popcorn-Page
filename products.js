@@ -31,7 +31,14 @@ function addToCart(product) {
   if (index !== -1) {
     cart[index].quantity += 1;
   } else {
-    cart.push({ ...product, quantity: 1 });
+    cart.push({
+  id: product.id,
+  name: product.name,
+  price: product.price,
+  quantity: 1,
+  image: product.image || (Array.isArray(product.images) ? product.images[0] : null)
+});
+
   }
   saveCart();
   updateCartCount();

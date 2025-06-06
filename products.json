@@ -811,7 +811,7 @@
       "category": "Beverages"
     },
     {
-      "name": "Milo Can",
+      "name": "Milo Can 240ml",
       "price": 3.30,
       "image": "milocan.jpg",
       "category": "Beverages"
@@ -826,6 +826,36 @@
       "name": "Milo Packet Drink 200ml",
       "price": 2.20,
       "image": "milopacket.jpg",
+      "category": "Beverages"
+    },
+    {
+      "name": "Milo Bottle Drink 500ml",
+      "price": 5.40,
+      "image": "milo1.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Nescafe Iced 500ml",
+      "price": 5.40,
+      "image": ["nesb1.png", "nesb2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Mountain Dew 400ml",
+      "price": 2.80,
+      "image": ["md1.png", "md2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Tropicana Twister 1.5L",
+      "price": 7.90,
+      "image": ["tt101.png", "tt102.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Nescafe Can 240ml",
+      "price": 3.20,
+      "image": ["nes1.png", "nes2.png", "nes3.png", "nes4.png", "nes5.png"],
       "category": "Beverages"
     }
   ]

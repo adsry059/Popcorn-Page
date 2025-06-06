@@ -443,6 +443,54 @@
       "price": 6.50,
       "image": ["r6501.png", "r6504.png", "r6503.png", "r6504.png"],
       "category": "Instant Noodles"
+    },
+    {
+      "name": "Habhal's Kicap Manis",
+      "price": 8.90,
+      "image": ["habhalsmanis.png", "habhalsmasin.png"],
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Kimball Tomato Sauce",
+      "price": 4.90,
+      "image": "kimballsostomato.png",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Kimball Chilli Sauce",
+      "price": 5.80,
+      "image": "kimballsoscili.png",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Life Thai Chilli Sauce",
+      "price": 6.50,
+      "image": "lifethaisos.jpg",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Life Chilli Sauce",
+      "price": 5.90,
+      "image": "lifesoscili.jpg",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Maggi Chilli Sauce",
+      "price": 5.90,
+      "image": "maggisoscili.png",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Maggi Seasoning",
+      "price": 6.90,
+      "image": "maggiseasoning.png",
+      "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "ABC Sweet Sauce",
+      "price": 4.40,
+      "image": "abckicap.jpg",
+      "category": "Ketchups & Sauces"
     }
   ]
   

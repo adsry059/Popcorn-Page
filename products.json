@@ -677,6 +677,42 @@
       "price": 9.30,
       "image": "gillette.jpg",
       "category": "Household Essentials"
+    },
+    {
+      "name": "Per'l Kacip Fatimah",
+      "price": 3.30,
+      "image": "kacipfatimah.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Air Penyejuk Badan Cap Kaki 3",
+      "price": 2.30,
+      "image": "capkaki3.jpeg",
+      "category": "Beverages"
+    },
+    {
+      "name": "Hemaviton Ener-G Drink",
+      "price": 2.30,
+      "image": "hemaviton.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Yakult Ace",
+      "price": 1.30,
+      "image": "yakult.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Yakult Ace Light",
+      "price": 1.40,
+      "image": "yakultlight.jpg",
+      "category": "Dairy & Eggs"
+    },
+    {
+      "name": "Ribena Mobile 300ml",
+      "price": 4.00,
+      "image": "ribenamobile.png",
+      "category": "Beverages"
     }
   ]
   

@@ -133,16 +133,51 @@ function renderPagination(products) {
 
 function initSlideshows() {
   const slideshows = document.querySelectorAll(".products-slideshow");
+
   slideshows.forEach(slideshow => {
     const dots = slideshow.querySelectorAll(".dot");
     const slides = slideshow.querySelectorAll(".slide");
+    let currentIndex = 0;
 
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      currentIndex = index;
+    }
+
+    // Dot click handler
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
         const index = +dot.dataset.index;
-        slides.forEach((s, i) => s.classList.toggle("active", i === index));
-        dots.forEach((d, i) => d.classList.toggle("active", i === index));
+        showSlide(index);
       });
+    });
+
+    // --- Swipe support ---
+    let startX = 0;
+    let endX = 0;
+
+    slideshow.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    slideshow.addEventListener("touchmove", (e) => {
+      endX = e.touches[0].clientX;
+    });
+
+    slideshow.addEventListener("touchend", () => {
+      const threshold = 30; // minimum swipe distance in px
+      const diff = startX - endX;
+
+      if (Math.abs(diff) > threshold) {
+        if (diff > 0 && currentIndex < slides.length - 1) {
+          // swipe left
+          showSlide(currentIndex + 1);
+        } else if (diff < 0 && currentIndex > 0) {
+          // swipe right
+          showSlide(currentIndex - 1);
+        }
+      }
     });
   });
 }

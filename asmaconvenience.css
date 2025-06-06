@@ -280,6 +280,10 @@
     text-align: center;
     width: 180px;
   }
+
+  .product-card h3 {
+    font-family: "Poppins", sans-serif;
+  }
   
   .product-card img {
     width: 100%;

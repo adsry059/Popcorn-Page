@@ -659,6 +659,24 @@
       "price": 4.30,
       "image": ["mentos1.png", "mentos2.png", "mentos3.png"],
       "category": "Snacks"
+    },
+    {
+      "name": "Downy Fabric Softener 400ml",
+      "price": 8.90,
+      "image": "downy.jpg",
+      "category": "Household Essentials"
+    },
+    {
+      "name": "MTL Disposable Poly Glove",
+      "price": 5.90,
+      "image": "gloves.jpeg",
+      "category": "Household Essentials"
+    },
+    {
+      "name": "Gillette Foamy Lemon Lime Shaving Foam",
+      "price": 9.30,
+      "image": "gillette.jpg",
+      "category": "Household Essentials"
     }
   ]
   

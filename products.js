@@ -7,7 +7,7 @@ fetch("products.json?v=" + Date.now()) // this forces the browser to fetch the l
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentPage = 1;
-const productsPerPage = 25;
+const productsPerPage = 15;
 let allProducts = [];
 let selectedCategory = "All";
 
@@ -70,8 +70,8 @@ function renderProducts(products) {
 
     if (Array.isArray(product.image)) {
       const images = product.image.map((img, i) => `
-        <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" alt="${product.name}">
-      `).join('');
+  <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" loading="lazy" alt="${product.name}">
+`).join('');
 
       const dots = product.image.map((_, i) => `
         <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" data-product="${index}"></span>

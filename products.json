@@ -533,6 +533,36 @@
       "price": 7.90,
       "image": "stampad.png",
       "category": "Stationaries"
+    },
+    {
+      "name": "Pantene Shampoo 300ml",
+      "price": 16.90,
+      "image": ["pantene01.png", "pantene02.png", "pantene03.png"],
+      "category": "Household Essentials"
+    },
+    {
+      "name": "Lifebuoy Body Wash 275ml",
+      "price": 9.80,
+      "image": ["lifebuoy01.png", "lifebuoy02.png", "lifebuoy03.png", "lifebuoy04.png", "lifebuoy05.png", "lifebuoy06.png"],
+      "category": "Household Essentials"
+    },
+    {
+      "name": "Johnson's Baby Lotion",
+      "price": 8.90,
+      "image": ["bj01.png", "bj02.png"],
+      "category": "Household Essentials"
+    },
+    {
+      "name": "Johnson's Baby Cologne",
+      "price": 10.90,
+      "image": "bjc.png",
+      "category": "Household Essentials"
+    },
+    {
+      "name": "Sunsilk Shampoo 160ml",
+      "price": 10.50,
+      "image": ["sunsilk01.png", "sunsilk02.png", "sunsilk03.png", "sunsilk04.png"],
+      "category": "Household Essentials"
     }
   ]
   

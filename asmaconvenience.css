@@ -560,6 +560,35 @@
   padding: 10px;
 }
 
+@media (max-width: 768px) {
+  .title-payment {
+    font-size: 24px;
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .payment {
+    height: auto;
+    padding: 20px;
+  }
+
+  .payment-grid {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .payment-item img {
+    width: 70px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .payment-item:hover {
+    transform: scale(1.1);
+  }
+}
+
 .services-section {
   padding-top: 100px;
   padding-right: 80px;
@@ -659,6 +688,7 @@
   .service-card i {
     display: block;
     margin: 0 auto 12px;
+    align-items: center;
   }
 }
 

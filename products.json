@@ -491,6 +491,48 @@
       "price": 4.40,
       "image": "abckicap.jpg",
       "category": "Ketchups & Sauces"
+    },
+    {
+      "name": "Fresh Coconut",
+      "price": 6.90,
+      "image": "coconutp.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Panadol Regular",
+      "price": 3.00,
+      "image": "PanAdult.jpg",
+      "category": "Health & Wellness"
+    },
+    {
+      "name": "Panadol Actifast",
+      "price": 5.00,
+      "image": "PanActifast.png",
+      "category": "Health & Wellness"
+    },
+    {
+      "name": "Panadol Menstrual",
+      "price": 8.60,
+      "image": "PanMenstrual.png",
+      "category": "Health & Wellness"
+    },
+    {
+      "name": "Kangaro Stapler",
+      "price": 4.00,
+      "image": "stapler.jpg",
+      "category": "Stationaries"
+    },
+    {
+      "name": "Faster Paper Punch",
+      "price": 14.90,
+      "image": "paperpunch.jpg",
+      "category": "Stationaries"
+    },
+    {
+      "name": "Artline Stamp Pad",
+      "price": 7.90,
+      "image": "stampad.png",
+      "category": "Stationaries"
     }
   ]
   

@@ -617,6 +617,25 @@
       "price": 8.40,
       "image": "battery.jpg",
       "category": "Household Essentials"
+    },
+    {
+      "name": "Yupi Gummy Pizza",
+      "price": 1.00,
+      "image": "yupi.jpg",
+      "category": "Snacks"
+    },
+    {
+      "name": "Himalaya Vajomba Peppermint Pastilles",
+      "price": 3.90,
+      "image": "himalayapastilles.png",
+      "category": "Snacks"
+    },
+    {
+      "name": "Wrigley's Doublemint Gum 58g",
+      "price": 6.90,
+      "image": "wrigleys.jpg",
+      "category": "Snacks"
     }
   ]
+  
   

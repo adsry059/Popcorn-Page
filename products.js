@@ -3,6 +3,8 @@
 const productList = document.getElementById("product-list");
 const cartCount = document.getElementById("cartCount");
 
+fetch("products.json?v=" + Date.now()) // this forces the browser to fetch the latest
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentPage = 1;
 const productsPerPage = 25;

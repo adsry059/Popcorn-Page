@@ -741,7 +741,7 @@
     {
       "name": "Barbican 330ml",
       "price": 5.00,
-      "image": ["barbbican1.png", "barbican2.png", "barbican3.png", "barbican4.png"],
+      "image": ["barbican1.png", "barbican2.png", "barbican3.png", "barbican4.png"],
       "category": "Beverages"
     },
     {
@@ -754,6 +754,30 @@
       "name": "Red Bull 250ml",
       "price": 3.20,
       "image": ["rb1.png", "rb2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Sunquick Ready to Drink 125ml",
+      "price": 1.20,
+      "image": ["sunquicka.png", "sunquicks.png", "sunquicko.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Desa Mineral Water 1.5L",
+      "price": 2.00,
+      "image": "d1500ml.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Desa Mineral Water 500ml",
+      "price": 1.00,
+      "image": "d500ml.png",
+      "category": "Beverages"
+    },
+    {
+      "name": "Tinge by Spritzer 450ml",
+      "price": 1.90,
+      "image": ["tinge01.png", "tinge02.png", "tinge03.png", "tinge04.png"],
       "category": "Beverages"
     }
   ]

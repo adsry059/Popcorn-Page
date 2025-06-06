@@ -140,18 +140,8 @@ function initSlideshows() {
     let currentIndex = 0;
 
     function showSlide(index) {
-  slides.forEach((slide, i) => {
-    if (i === index) {
-      slide.classList.add("active");
-    } else {
-      slide.classList.remove("active");
-    }
-  });
-
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
-
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
   currentIndex = index;
 }
 

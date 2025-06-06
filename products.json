@@ -721,9 +721,39 @@
       "category": "Beverages"
     },
     {
-      "name": "Yeo's Packet Drinks",
+      "name": "Yeo's Packet Drinks 250ml",
       "price": 1.30,
       "image": ["yeos101.png", "yeos102.png", "yeos103.png", "yeos104.png", "yeos105.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "V-Soy Bottle",
+      "price": 3.40,
+      "image": ["vsoy1.png", "vsoy2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Yeo's Packet Drinks 1L",
+      "price": 4.10,
+      "image": ["yeos201.png", "yeos202.png", "yeos203.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Barbican 330ml",
+      "price": 5.00,
+      "image": ["barbbican1.png", "barbican2.png", "barbican3.png", "barbican4.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Frenche Toast Coffee Can",
+      "price": 3.10,
+      "image": ["ft1.png", "ft2.png"],
+      "category": "Beverages"
+    },
+    {
+      "name": "Red Bull 250ml",
+      "price": 3.20,
+      "image": ["rb1.png", "rb2.png"],
       "category": "Beverages"
     }
   ]

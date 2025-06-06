@@ -36,7 +36,8 @@ function addToCart(product) {
   name: product.name,
   price: product.price,
   quantity: 1,
-  image: product.image || (Array.isArray(product.images) ? product.images[0] : null)
+  image: Array.isArray(product.image) ? product.image[0] : product.image
+
 });
 
   }

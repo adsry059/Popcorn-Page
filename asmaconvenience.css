@@ -356,22 +356,6 @@
   z-index: 1;
 }
 
-.products-slideshow img.slide {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Or `contain` if you want to preserve full image */
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.products-slideshow img.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
 .products-slideshow .dots {
   display: flex;
   justify-content: center;

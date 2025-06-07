@@ -139,42 +139,38 @@ function initSlideshows() {
     const slides = slideshow.querySelectorAll(".slide");
     let currentIndex = 0;
 
+    // Must be scoped inside this loop
     function showSlide(index) {
-      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
-      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
       currentIndex = index;
     }
 
-    // Dot click handler
-    dots.forEach(dot => {
+    // Attach event to each dot individually
+    dots.forEach((dot, i) => {
       dot.addEventListener("click", () => {
-        const index = +dot.dataset.index;
-        showSlide(index);
+        showSlide(i);
       });
     });
 
-    // --- Swipe support ---
+    // Optional: swipe support
     let startX = 0;
-    let endX = 0;
-
     slideshow.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
     });
 
-    slideshow.addEventListener("touchmove", (e) => {
-      endX = e.touches[0].clientX;
-    });
-
-    slideshow.addEventListener("touchend", () => {
-      const threshold = 30; // minimum swipe distance in px
+    slideshow.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
       const diff = startX - endX;
-
+      const threshold = 30;
       if (Math.abs(diff) > threshold) {
         if (diff > 0 && currentIndex < slides.length - 1) {
-          // swipe left
           showSlide(currentIndex + 1);
         } else if (diff < 0 && currentIndex > 0) {
-          // swipe right
           showSlide(currentIndex - 1);
         }
       }

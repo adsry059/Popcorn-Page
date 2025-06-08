@@ -191,6 +191,7 @@ html {
 
 .section {
   margin-bottom: 40px;
+  padding-left: 10px;
 }
 
 .section-title {
@@ -619,9 +620,9 @@ html {
 
 .services-section {
   padding-top: 100px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-left: 100px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+  padding-left: 20px;
 }
 
 .services-container {

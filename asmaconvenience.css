@@ -563,12 +563,18 @@ html {
 }
 
  .payment-right {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+ }
+
+ .payment-right h3 {
   font-size: 35px;
   font-weight: bold;
   color: #fed000;
   text-align: right;
-}
-
+ }
+ 
 .payment-left {
   display: flex;
   flex-wrap: wrap; /* Allows multiple rows if needed */

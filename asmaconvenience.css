@@ -619,16 +619,18 @@ html {
 }
 
 .services-section {
-  padding-top: 100px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-left: 100px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .services-container {
   display: flex;
   gap: 60px;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
 }
 
 .services-left {

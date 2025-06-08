@@ -568,6 +568,8 @@ html {
   font-weight: bold;
   text-align: center;
   color: #fed000;
+  flex: 1;
+  min-width: 200px;
 }
 
 .payment-left {
@@ -575,6 +577,8 @@ html {
   justify-content: center;
   align-items: center;
   height: 65vh;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
 }
 
 .payment-grid {
@@ -660,7 +664,7 @@ html {
   flex: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 60px;
 }
 
 .service-card {
@@ -668,9 +672,9 @@ html {
 }
 
 .service-icon {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 12px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 14px;
   display: inline-block;
   object-fit: contain;
   border-radius: 8px;
@@ -678,22 +682,22 @@ html {
 }
 
 .service-card i {
-  font-size: 50px;
+  font-size: 60px;
   color: #f0f0f0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: inline-block;
 }
 
 .service-card h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
+  margin: 12px 0 7px;
+  font-size: 20px;
   font-weight: bold;
   color: #fed000;
 }
 
 .service-card p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {

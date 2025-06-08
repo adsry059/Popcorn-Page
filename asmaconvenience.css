@@ -570,11 +570,12 @@ html {
   line-height: 64px; /* Match tallest logo height */
 }
 
- .payment-right h3 {
-  font-size: 35px;
+ .payment-right h1 {
+  font-size: 48px;
   font-weight: bold;
-  color: #fed000;
+  color: #fff;
   text-align: right;
+  line-height: 1.3;
  }
  
 .payment-left {

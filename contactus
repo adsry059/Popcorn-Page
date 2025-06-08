@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <title>Asma' Convenience - Contacts</title>
+    <link rel="stylesheet" href="asmaconvenience.css" />
+</head>
+<body>
+    <div class="header">
+    <div class="logo-container">
+      <img src="logo.jpeg" alt="Asma Convenience Logo" class="logo-img" />
+      <span class="logo-text">Kedai Serbaneka Fareeha</span>
+    </div> 
+
+    <nav class="nav-links">
+      <a href="index.html">HOME</a>
+      <div class="dropdown">
+        <a href="#">CATEGORIES</a>
+        <div class="dropdown-content">
+          <a href="products.html?category=Dairy%20%26%20Eggs">Dairy & Eggs</a>
+          <a href="products.html?category=Snacks">Snacks</a>
+          <a href="products.html?category=Phone%20Accessories">Phone Accessories</a>
+          <a href="products.html?category=Health%20%26%20Wellness">Health & Wellness</a>
+          <a href="products.html?category=Instant%20Noodles">Instant Noodles</a>
+          <a href="products.html?category=Ketchups%20%26%20Sauces">Ketchups & Sauces</a>
+          <a href="products.html?category=Beverages">Beverages</a>
+          <a href="products.html?category=Household%20Essentials">Household Essentials</a>
+          <a href="products.html?category=Stationaries">Stationaries</a>
+        </div>
+      </div>
+      <a href="products.html">PRODUCTS</a>
+      <a href="services.html">SERVICES</a>
+      <a href="payment.html">PAYMENT</a>
+      <a href="contactus.html">CONTACT US</a>
+    </nav>
+    </div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="asmaconvenience.png" class="banner-img" alt="Asma Convenience">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner5.png" class="banner-img" alt="Promo 5">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="banner1.png" class="banner-img" alt="Promo 1">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner2.png" class="banner-img" alt="Promo 2">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="banner3.png" class="banner-img" alt="Promo 3">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner4.png" class="banner-img" alt="Promo 4">
+    </div>
+  
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div style="text-align:center; margin-top: 10px;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Dot controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    // Main function
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+    }
+    
+    // Optional: Auto-slide
+    setInterval(() => {
+      plusSlides(1);
+    }, 5000);
+    </script>
+
+  <div class="contactus-section">
+      <h1>Need help? Get in touch!</h1>
+  </div>
+  <div class="contact-info">
+  <p><strong>Phone:</strong> +6019-314 9748</p>
+  <p><strong>Location:</strong> Mahallah Asma, IIUM</p>
+  <p><strong>Social Media: <br></strong>
+    <a href = "https://m.facebook.com/101898915537876/" class= "facebook-link" target="_blank">Facebook: KSF</a><br>
+    <a href = "https://www.instagram.com/ksf_iium?igsh=MXhtZDY1aGNoeW56NQ==" class= "instagram-link" target= "_blank">Instagram: ksf_iium</a>
+  </p>
+</div>
+</body>
+</html>

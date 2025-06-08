@@ -362,6 +362,13 @@
   justify-content: center;
   gap: 5px;
   margin-top: 8px;
+  
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 6px;
+  z-index: 2;
 }
 
 .products-slideshow .dot {

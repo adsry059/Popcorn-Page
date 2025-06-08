@@ -140,7 +140,7 @@ function initSlideshows() {
       dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
       currentIndex = index;
     }
-
+// Dot click handler
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
         const index = +dot.dataset.index;
@@ -148,6 +148,7 @@ function initSlideshows() {
       });
     });
 
+     // --- Swipe support ---
     let startX = 0;
     let endX = 0;
 

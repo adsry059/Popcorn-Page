@@ -557,28 +557,23 @@ html {
   display: flex;
   gap: 60px;
   flex-wrap: wrap;
+  align-items: center; /* Align text and logos vertically */
+  justify-content: space-between; /* Space between left and right */
+  padding: 20px;
 }
 
  .payment-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
   font-size: 35px;
   font-weight: bold;
-  text-align: center;
   color: #fed000;
-  flex: 1;
-  min-width: 200px;
+  text-align: right;
 }
 
 .payment-left {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Allows multiple rows if needed */
+  gap: 20px; /* Optional spacing between logos */
   align-items: center;
-  height: 65vh;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
 }
 
 .payment-grid {

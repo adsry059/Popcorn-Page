@@ -1,13 +1,11 @@
-// UPDATED products.js with image slideshow support
-
 const productList = document.getElementById("product-list");
 const cartCount = document.getElementById("cartCount");
 
-fetch("products.json?v=" + Date.now()) // this forces the browser to fetch the latest
+fetch("products.json?v=" + Date.now()); // this forces the browser to fetch the latest
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let currentPage = 1;
-const productsPerPage = 15;
+const productsPerPage = 20;
 let allProducts = [];
 let selectedCategory = "All";
 
@@ -32,14 +30,12 @@ function addToCart(product) {
     cart[index].quantity += 1;
   } else {
     cart.push({
-  id: product.id,
-  name: product.name,
-  price: product.price,
-  quantity: 1,
-  image: Array.isArray(product.image) ? product.image[0] : product.image
-
-});
-
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+      image: Array.isArray(product.image) ? product.image[0] : product.image
+    });
   }
   saveCart();
   updateCartCount();
@@ -69,13 +65,13 @@ function renderProducts(products) {
     let imageContent = '';
 
     if (Array.isArray(product.image)) {
-      const images = product.image.map((img, i) => `
-  <img src="${img}" class="slide ${i === 0 ? 'active' : ''}" loading="lazy" alt="${product.name}">
-`).join('');
+      const images = product.image.map((img, i) =>
+        `<img src="${img}" class="slide ${i === 0 ? 'active' : ''}" loading="lazy" alt="${product.name}">`
+      ).join('');
 
-      const dots = product.image.map((_, i) => `
-        <span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" data-product="${index}"></span>
-      `).join('');
+      const dots = product.image.map((_, i) =>
+        `<span class="dot ${i === 0 ? 'active' : ''}" data-index="${i}" data-product="${index}"></span>`
+      ).join('');
 
       imageContent = `
         <div class="products-slideshow" data-product="${index}">
@@ -139,34 +135,34 @@ function initSlideshows() {
     const slides = slideshow.querySelectorAll(".slide");
     let currentIndex = 0;
 
-    // Must be scoped inside this loop
     function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
       currentIndex = index;
     }
 
-    // Attach event to each dot individually
-    dots.forEach((dot, i) => {
+    dots.forEach(dot => {
       dot.addEventListener("click", () => {
-        showSlide(i);
+        const index = +dot.dataset.index;
+        showSlide(index);
       });
     });
 
-    // Optional: swipe support
     let startX = 0;
+    let endX = 0;
+
     slideshow.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
     });
 
-    slideshow.addEventListener("touchend", (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
+    slideshow.addEventListener("touchmove", (e) => {
+      endX = e.touches[0].clientX;
+    });
+
+    slideshow.addEventListener("touchend", () => {
       const threshold = 30;
+      const diff = startX - endX;
+
       if (Math.abs(diff) > threshold) {
         if (diff > 0 && currentIndex < slides.length - 1) {
           showSlide(currentIndex + 1);

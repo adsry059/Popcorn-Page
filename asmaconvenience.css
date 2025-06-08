@@ -609,32 +609,32 @@ html {
   padding: 10px;
 }
 
-@media (max-width: 768px) {
-  .title-payment {
-    font-size: 24px;
-    height: auto;
-    padding: 20px 10px;
-    text-align: center;
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .payment-section {
+    padding: 40px 10px;
   }
 
-  .payment {
-    height: auto;
-    padding: 20px;
+  .payment-container {
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .payment-right h1 {
+    font-size: 28px;
   }
 
   .payment-grid {
-    gap: 15px;
-    max-width: 100%;
+    gap: 10px;
   }
 
   .payment-item img {
-    width: 70px;
+    width: 60px;
     padding: 5px;
-    border-radius: 10px;
   }
 
   .payment-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Less zoom on mobile */
   }
 }
 

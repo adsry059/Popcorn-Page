@@ -557,16 +557,18 @@ html {
   display: flex;
   gap: 60px;
   flex-wrap: wrap;
-  align-items: center; /* Align text and logos vertically */
+  align-items: flex-start;
   justify-content: space-between; /* Space between left and right */
   padding: 20px;
 }
 
  .payment-right {
-  flex: 1;
-  min-width: 200px;
-  display: flex;
- }
+  font-size: 35px;
+  font-weight: bold;
+  color: #fed000;
+  text-align: right;
+  line-height: 64px; /* Match tallest logo height */
+}
 
  .payment-right h3 {
   font-size: 35px;
@@ -577,9 +579,8 @@ html {
  
 .payment-left {
   display: flex;
-  flex-wrap: wrap; /* Allows multiple rows if needed */
-  gap: 20px; /* Optional spacing between logos */
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .payment-grid {

@@ -917,3 +917,22 @@ main {
   }
 }
 
+a.facebook-link{
+  color: #fed000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.facebook-link:hover{
+  text-decoration: underline;
+}
+
+a.instagram-link{
+  color: #fed000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.instagram-link:hover{
+  text-decoration: underline;
+}

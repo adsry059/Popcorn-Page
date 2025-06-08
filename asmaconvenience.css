@@ -665,7 +665,7 @@ html {
   flex: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
+  gap: 50px;
 }
 
 .service-card {
@@ -673,9 +673,9 @@ html {
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 14px;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 12px;
   display: inline-block;
   object-fit: contain;
   border-radius: 8px;
@@ -690,15 +690,15 @@ html {
 }
 
 .service-card h3 {
-  margin: 12px 0 7px;
-  font-size: 20px;
+  margin: 10px 0 6px;
+  font-size: 19px;
   font-weight: bold;
   color: #fed000;
 }
 
 .service-card p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {

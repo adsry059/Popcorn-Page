@@ -340,6 +340,23 @@
   background-color: transparent;
 }
 
+.products-slideshow img.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.products-slideshow img.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
 .products-slideshow .dots {
   display: flex;
   justify-content: center;

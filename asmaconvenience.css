@@ -64,6 +64,12 @@ html {
   cursor: pointer;
 }
 
+.menu-icon span {
+  font-size: 32px;
+  color: white;
+  line-height: 1;
+}
+
   .nav-links a {
     color: white;
     text-decoration: none;
@@ -1016,9 +1022,9 @@ main {
 
 .contact-info {
   flex: 1.3;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding-right: 0; /* Remove or reduce this */
+  padding-right: 0; 
   margin-right: 0;
 }
 

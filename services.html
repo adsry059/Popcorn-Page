@@ -14,6 +14,10 @@
       <img src="logo.jpeg" alt="Asma Convenience Logo" class="logo-img" />
       <span class="logo-text">Kedai Serbaneka Fareeha</span>
     </div> 
+    <div class="menu-icon" onclick="toggleNav()">
+      <i class="fas fa-bars" id="open-icon"></i>
+      <span id="close-icon" style="display: none;">&times;</span>
+    </div>
     <nav class="nav-links">
       <a href="index.html">HOME</a>
       <div class="dropdown">
@@ -66,5 +70,25 @@
     </div>
   </div>
  </section> 
+
+ <script>
+  function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    navLinks.classList.toggle('show');
+
+    if (navLinks.classList.contains('show')) {
+      openIcon.style.display = 'none';
+      closeIcon.style.display = 'inline';
+    } else {
+      openIcon.style.display = 'inline';
+      closeIcon.style.display = 'none';
+    }
+  }
+</script>
+
+
 </body>
 </html> 

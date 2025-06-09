@@ -333,12 +333,14 @@ html {
   .card {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    width: 80%;
+    width: 100%;
     max-width: 80%;
   }
 
   .card img {
+    width: 100%;
     height: auto; /* prevent distortion on narrow screens */
+    display: block;
   }
 }
 

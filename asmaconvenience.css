@@ -110,19 +110,19 @@ html {
   z-index: 999;
 }
 
-  .nav-links.show {
+    .nav-links.show {
     display: flex;
   }
 
   /* Close icon inside nav */
-.close-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
 
   .logo-container {
     flex-direction: column;

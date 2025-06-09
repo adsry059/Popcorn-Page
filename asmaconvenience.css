@@ -1048,6 +1048,7 @@ main {
   align-items: center;
   margin-bottom: 17px;
   font-size: 24px;
+  justify-content: center;
 }
 
 .contact-item i {

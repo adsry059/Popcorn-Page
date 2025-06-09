@@ -57,6 +57,13 @@ html {
     transition: opacity 0.3s ease, transform 0.8s ease-in-out;
   }
 
+  .menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
   .nav-links a {
     color: white;
     text-decoration: none;
@@ -79,10 +86,26 @@ html {
   }
   
   @media (max-width: 768px) {
+
+     .menu-icon {
+    display: block;
+  }
+
     .nav-links {
+    display: none;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .logo-container {

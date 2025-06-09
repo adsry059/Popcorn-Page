@@ -16,6 +16,9 @@
       <img src="logo.jpeg" alt="Asma Convenience Logo" class="logo-img" />
       <span class="logo-text">Kedai Serbaneka Fareeha</span>
     </div>    
+    <div class="menu-icon" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </div>
     <nav class="nav-links">
       <a href="index.html">HOME</a>
       <div class="dropdown">
@@ -242,5 +245,11 @@
 
   </section>
  
+  <script>
+  function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
 </body>
 </html>

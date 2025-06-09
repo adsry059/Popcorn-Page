@@ -565,7 +565,7 @@ html {
   font-size: 35px;
   font-weight: bold;
   color: #fed000;
-  text-align: right;
+  text-align: left;
   line-height: 64px; /* Match tallest logo height */
 }
 

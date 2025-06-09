@@ -943,22 +943,46 @@ main {
   }
 }
 
-a.facebook-link{
-  color: #fed000;
-  text-decoration: none;
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.contact-item i {
+  font-size: 32px;
+  margin-right: 20px;
+}
+
+.contact-item span {
   font-weight: bold;
 }
 
-a.facebook-link:hover{
-  text-decoration: underline;
+.contact-image img {
+  max-width: 400px;
+  height: auto;
 }
 
-a.instagram-link{
-  color: #fed000;
+.contact-item a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-}
-
-a.instagram-link:hover{
-  text-decoration: underline;
+  font-size: 24px;
 }

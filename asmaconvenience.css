@@ -78,6 +78,33 @@ html {
     align-items: center;
   }
   
+  @media (max-width: 768px) {
+    .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 80px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  nav.nav-links a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  }
+  
   .dropdown {
     position: relative;
     display: inline-block;
@@ -1000,4 +1027,42 @@ main {
 .contact-item a:hover {
   color: #fed000;
    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+  }
+
+  .contact-item {
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .contact-item i {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  .contact-item a {
+    font-size: 18px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
 }

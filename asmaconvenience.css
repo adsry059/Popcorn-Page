@@ -634,6 +634,7 @@ html {
   color: #fed000;
   text-align: left;
   line-height: 64px; /* Match tallest logo height */
+  justify-content: left;
 }
 
  .payment-right h1 {
@@ -1017,7 +1018,7 @@ main {
   text-align: center;
   color: white;
   font-size: 48px;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -1026,7 +1027,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   padding: 20px 80px;
 }
 

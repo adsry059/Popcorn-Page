@@ -744,6 +744,8 @@ html {
     font-size: 32px;
     text-align: center;
     justify-items: center;
+    align-items: center;
+    justify-self: center;
   }
 
   .services-right {
@@ -766,7 +768,6 @@ html {
     display: block;
     margin: 0 auto 12px;
     align-items: center;
-    justify-self: center;
   }
 }
 

@@ -558,8 +558,7 @@ html {
   gap: 60px;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between; /* Space between left and right */
-  padding: 20px;
+  justify-content: center
 }
 
  .payment-right {
@@ -961,6 +960,7 @@ main {
 
 .contact-info {
   flex: 1;
+  justify-content: center;
 }
 
 .contact-info h1 {
@@ -971,7 +971,7 @@ main {
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   font-size: 24px;
 }
 
@@ -994,4 +994,9 @@ main {
   text-decoration: none;
   font-weight: bold;
   font-size: 24px;
+}
+
+.contact-item a:hover {
+  color: #fed000;
+   text-decoration: underline;
 }

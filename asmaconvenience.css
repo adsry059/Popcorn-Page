@@ -648,6 +648,7 @@ html {
 
   .payment-right h1 {
     font-size: 28px;
+    text-align: center;
   }
 
   .payment-grid {
@@ -742,6 +743,7 @@ html {
   .services-left h1 {
     font-size: 32px;
     text-align: center;
+    justify-items: center;
   }
 
   .services-right {
@@ -764,6 +766,7 @@ html {
     display: block;
     margin: 0 auto 12px;
     align-items: center;
+    justify-self: center;
   }
 }
 

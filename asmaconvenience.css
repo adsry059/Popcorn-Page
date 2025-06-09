@@ -335,12 +335,13 @@ html {
     scroll-snap-align: start;
     width: 100%;
     max-width: 80%;
+    height: fit-content;
   }
 
   .card img {
     width: 100%;
-    height: auto; /* prevent distortion on narrow screens */
-    display: block;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

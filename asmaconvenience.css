@@ -985,12 +985,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 80px;
 }
 
 .contact-info {
-  flex: 1.2;
+  flex: 1;
   justify-content: center;
   align-items: center;
   padding-right: 0; /* Remove or reduce this */
@@ -1016,6 +1016,10 @@ main {
 
 .contact-item span {
   font-weight: bold;
+}
+
+.contact-image {
+  flex: 1;
 }
 
 .contact-image img {

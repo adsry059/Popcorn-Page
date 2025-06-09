@@ -980,15 +980,18 @@ main {
 
 .contact-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: 20px 80px;
 }
 
 .contact-info {
-  flex: 1;
+  flex: 1.2;
   justify-content: center;
   align-items: center;
+  padding-right: 0; /* Remove or reduce this */
+  margin-right: 0;
 }
 
 .contact-info h1 {

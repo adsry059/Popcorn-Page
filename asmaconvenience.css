@@ -70,6 +70,10 @@ html {
   line-height: 1;
 }
 
+.close-icon {
+  display: none;
+}
+
   .nav-links a {
     color: white;
     text-decoration: none;

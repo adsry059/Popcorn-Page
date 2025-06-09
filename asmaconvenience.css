@@ -980,7 +980,7 @@ main {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 80px;
 }

@@ -26,6 +26,10 @@ html {
     align-items: center;
     position: relative;
   }
+
+  .top-bar {
+    justify-content: space-between;
+  }
   
   .logo-container {
     display: flex;
@@ -92,6 +96,13 @@ html {
   }
   
   @media (max-width: 768px) {
+    .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
 
      .menu-icon {
     display: block;

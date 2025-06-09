@@ -14,10 +14,10 @@
       <span class="logo-text">Kedai Serbaneka Fareeha</span>
     </div> 
     <div class="menu-icon" onclick="toggleNav()">
-      <i class="fas fa-bars" id="open-icon"></i>
-      <span id="close-icon" style="display: none;">&times;</span>
+      <i class="fas fa-bars"></i>
     </div>
     <nav class="nav-links">
+      <div class="close-icon" onclick="toggleNav()">×</div>
       <a href="index.html">HOME</a>
       <div class="dropdown">
         <a href="#">CATEGORIES</a>
@@ -75,20 +75,18 @@
 
 <script>
   function toggleNav() {
-    const navLinks = document.querySelector('.nav-links');
-    const openIcon = document.getElementById('open-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    navLinks.classList.toggle('show');
-
-    if (navLinks.classList.contains('show')) {
-      openIcon.style.display = 'none';
-      closeIcon.style.display = 'inline';
-    } else {
-      openIcon.style.display = 'inline';
-      closeIcon.style.display = 'none';
-    }
+    document.querySelector('.nav-links').classList.toggle('show');
   }
+
+  // Close nav when any link is clicked
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('show');
+      });
+    });
+  });
 </script>
 
 </body>

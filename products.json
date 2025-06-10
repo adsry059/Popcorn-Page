@@ -218,7 +218,7 @@
        {
       "name": "Peanut Butter & Chocolate Spread",
       "price": 3.70,
-      "image": "mwchocojam.jpg",
+      "image": "mwchocjam.jpg",
       "category": "Dairy & Eggs" 
     },
        {
@@ -279,7 +279,7 @@
       {
       "name": "Kit Kat 4 fingers",
       "price": 3.70,
-      "image": "kitkat4f.jpg",
+      "image": "kitkat4f.jpeg",
       "category": "Snacks"
     },
       {

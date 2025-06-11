@@ -1,9 +1,4 @@
 /* General reset and base styles */
-
-html {
-  scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +21,7 @@ html {
     align-items: center;
     position: relative;
   }
-
+  
   .logo-container {
     display: flex;
     align-items: center;
@@ -57,23 +52,6 @@ html {
     transition: opacity 0.3s ease, transform 0.8s ease-in-out;
   }
 
-  .menu-icon {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-icon span {
-  font-size: 32px;
-  color: white;
-  line-height: 1;
-}
-
-.close-icon {
-  display: none;
-}
-
   .nav-links a {
     color: white;
     text-decoration: none;
@@ -95,92 +73,38 @@ html {
     align-items: center;
   }
   
-  @media (max-width: 768px) {
-     .menu-icon {
-    display: block;
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
-
-    .nav-links {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: #333;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-    .nav-links.show {
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    min-width: 200px;
+    z-index: 1;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: flex;
   }
 
-  /* Close icon inside nav */
-  .close-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+  .dropdown-content a:hover {
+    color: #fed000;
   }
-
-  .logo-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-  }
-
-  .logo-img {
-    width: 80px;
-  }
-
-  .logo-text {
-    font-size: 18px;
-  }
-
-  nav.nav-links a {
-    font-size: 16px;
-    padding: 8px 0;
-  }
-  }
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-  
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: black;
-  min-width: 200px;
-  z-index: 1;
-  flex-direction: column;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-  
-.dropdown-content a {
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  font-weight: bold;
-}
-  
-.dropdown:hover .dropdown-content {
-   display: flex;
-}
-
-.dropdown-content a:hover {
-  color: #fed000;
-}
 
   /* Banner images */
 .banner-img {
@@ -257,12 +181,11 @@ html {
 .home-container {
   padding: 20px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin-left: 20px;
 }
 
 .section {
   margin-bottom: 40px;
-  padding-left: 10px;
 }
 
 .section-title {
@@ -319,29 +242,6 @@ html {
   .dropdown-content {
     position: static;
     width: 100%;
-  }
-
-  .cards-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding-left: 10px;
-  }
-
-  .card {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    width: 100%;
-    max-width: 80%;
-    height: fit-content;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 }
 
@@ -462,13 +362,6 @@ html {
   justify-content: center;
   gap: 5px;
   margin-top: 8px;
-  
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 6px;
-  z-index: 2;
 }
 
 .products-slideshow .dot {
@@ -640,42 +533,22 @@ html {
   }
 }
 
-.payment-section {
-  padding-top: 100px;
-  padding-right: 20px;
-  padding-bottom: 100px;
-  padding-left: 20px;
-}
-
-.payment-container {
+ .title-payment {
   display: flex;
-  gap: 100px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center
-}
-
- .payment-right {
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
   font-size: 35px;
   font-weight: bold;
+  text-align: center;
   color: #fed000;
-  text-align: left;
-  line-height: 64px; /* Match tallest logo height */
-  justify-content: left;
 }
 
- .payment-right h1 {
-  font-size: 48px;
-  font-weight: bold;
-  color: #fff;
-  text-align: left;
-  line-height: 1.3;
- }
- 
-.payment-left {
+.payment {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
 }
 
 .payment-grid {
@@ -703,41 +576,40 @@ html {
   padding: 10px;
 }
 
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
-  .payment-section {
-    padding: 40px 10px;
-  }
-
-  .payment-container {
-    gap: 30px;
-    padding: 10px;
-  }
-
-  .payment-right h1 {
-    font-size: 28px;
+@media (max-width: 768px) {
+  .title-payment {
+    font-size: 24px;
+    height: auto;
+    padding: 20px 10px;
     text-align: center;
   }
 
+  .payment {
+    height: auto;
+    padding: 20px;
+  }
+
   .payment-grid {
-    gap: 10px;
+    gap: 15px;
+    max-width: 100%;
   }
 
   .payment-item img {
-    width: 60px;
+    width: 70px;
     padding: 5px;
+    border-radius: 10px;
   }
 
   .payment-item:hover {
-    transform: scale(1.1); /* Less zoom on mobile */
+    transform: scale(1.1);
   }
 }
 
 .services-section {
   padding-top: 100px;
-  padding-right: 20px;
-  padding-bottom: 100px;
-  padding-left: 20px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-left: 100px;
 }
 
 .services-container {
@@ -770,8 +642,8 @@ html {
 }
 
 .service-icon {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   margin-bottom: 12px;
   display: inline-block;
   object-fit: contain;
@@ -782,19 +654,19 @@ html {
 .service-card i {
   font-size: 50px;
   color: #f0f0f0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
 .service-card h3 {
-  margin: 10px 0 6px;
-  font-size: 19px;
+  margin: 10px 0 5px;
+  font-size: 18px;
   font-weight: bold;
   color: #fed000;
 }
 
 .service-card p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -811,9 +683,6 @@ html {
   .services-left h1 {
     font-size: 32px;
     text-align: center;
-    justify-items: center;
-    align-items: center;
-    justify-self: center;
   }
 
   .services-right {
@@ -1041,108 +910,23 @@ main {
   }
 }
 
-.contact-title {
-  text-align: center;
-  color: white;
-  font-size: 48px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-
-.contact-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  padding: 20px 80px;
-}
-
-.contact-info {
-  flex: 1.3;
-  justify-content: space-around;
-  align-items: center;
-  padding-right: 0; 
-  margin-right: 0;
-}
-
-.contact-info h1 {
-  font-size: 48px;
-  margin-bottom: 40px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 17px;
-  font-size: 24px;
-  justify-content: center;
-}
-
-.contact-item i {
-  font-size: 32px;
-  margin-right: 20px;
-}
-
-.contact-item span {
-  font-weight: bold;
-}
-
-.contact-image {
-  flex: 0.8;
-}
-
-.contact-image img {
-  max-width: 400px;
-  height: auto;
-}
-
-.contact-item a {
-  color: #fff;
+a.facebook-link{
+  color: #fed000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 24px;
 }
 
-.contact-item a:hover {
+a.facebook-link:hover{
+  text-decoration: underline;
+}
+
+a.instagram-link{
   color: #fed000;
-   text-decoration: underline;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 36px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-
-  .contact-container {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .contact-info {
-    margin-bottom: 30px;
-  }
-
-  .contact-item {
-    justify-content: center;
-    font-size: 18px;
-  }
-
-  .contact-item i {
-    font-size: 24px;
-    margin-right: 12px;
-  }
-
-  .contact-item a {
-    font-size: 18px;
-  }
-
-  .contact-image img {
-    max-width: 100%;
-    height: auto;
-  }
+a.instagram-link:hover{
+  text-decoration: underline;
 }
+

@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
     <title>Asma' Convenience - Contacts</title>
     <link rel="stylesheet" href="asmaconvenience.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
     <div class="header">
@@ -15,12 +14,7 @@
       <span class="logo-text">Kedai Serbaneka Fareeha</span>
     </div> 
 
-    <div class="menu-icon" onclick="toggleNav()">
-      <i class="fas fa-bars"></i>
-    </div>
-
     <nav class="nav-links">
-      <div class="close-icon" onclick="toggleNav()">×</div>
       <a href="index.html">HOME</a>
       <div class="dropdown">
         <a href="#">CATEGORIES</a>
@@ -43,60 +37,97 @@
     </nav>
     </div>
 
-  <section id="contactus">
+  <div class="slideshow-container">
 
-  <h1 class="contact-title">Contact Us</h1>
-
-  <div class="contact-container">
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fab fa-whatsapp"></i>
-        <a href="https://wa.me/60193149748" target="_blank">019-314 9748</a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-telegram-plane"></i>
-        <a href="https://t.me/+zmRWgYmFlAIzOWI1" target="_blank"><u>Asma Shop (KSF)</u></a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-facebook-f"></i>
-        <a href="https://m.facebook.com/101898915537876/" target="_blank"><u>KSF</u></a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-instagram"></i>
-        <a href="https://www.instagram.com/ksf_iium?igsh=MXhtZDY1aGNoeW56NQ==" target="_blank"><u>@ksf_iium</u></a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <a href="https://g.co/kgs/t4s66xi" target="_blank">Asma Conv</a>
-      </div>
+    <div class="mySlides fade">
+      <img src="asmaconvenience.png" class="banner-img" alt="Asma Convenience">
     </div>
 
-    <div class="contact-image">
-      <img src="shopping-cart-illustration.png" alt="Shopping Illustration" />
+    <div class="mySlides fade">
+      <img src="banner5.png" class="banner-img" alt="Promo 5">
     </div>
+  
+    <div class="mySlides fade">
+      <img src="banner1.png" class="banner-img" alt="Promo 1">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner2.png" class="banner-img" alt="Promo 2">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="banner3.png" class="banner-img" alt="Promo 3">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="banner4.png" class="banner-img" alt="Promo 4">
+    </div>
+  
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
   </div>
 
-  </section>
-
+  <div style="text-align:center; margin-top: 10px;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  
   <script>
-  function toggleNav() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Dot controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    // Main function
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+    
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+    
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+    }
+    
+    // Optional: Auto-slide
+    setInterval(() => {
+      plusSlides(1);
+    }, 5000);
+    </script>
 
-  // Close nav when any link is clicked
-  document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('show');
-      });
-    });
-  });
-</script>
-
+  <div class="contactus-section">
+      <h1>Need help? Get in touch!</h1>
+  </div>
+  <div class="contact-info">
+  <p><strong>Phone:</strong> +6019-314 9748</p>
+  <p><strong>Location:</strong> Mahallah Asma, IIUM</p>
+  <p><strong>Social Media: <br></strong>
+    <a href = "https://m.facebook.com/101898915537876/" class= "facebook-link" target="_blank">Facebook: KSF</a><br>
+    <a href = "https://www.instagram.com/ksf_iium?igsh=MXhtZDY1aGNoeW56NQ==" class= "instagram-link" target= "_blank">Instagram: ksf_iium</a>
+  </p>
+</div>
 </body>
 </html>
